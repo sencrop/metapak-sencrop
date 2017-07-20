@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Package transformer should work with an empty package.json 1`] = `
+Object {
+  "config": Object {
+    "commitizen": Object {
+      "path": "./node_modules/cz-conventional-changelog",
+    },
+  },
+  "dependencies": Object {},
+  "devDependencies": Object {
+    "commitizen": "^2.9.6",
+    "conventional-changelog-cli": "^1.2.0",
+    "cz-conventional-changelog": "^2.0.0",
+    "eslint": "3.16.0",
+    "eslint-config-simplifield": "4.1.1",
+  },
+  "engines": Object {
+    "node": ">=6.10.0",
+  },
+  "license": "SEE LICENSE IN LICENSE.md",
+  "metapak": Object {
+    "data": Object {
+      "files": "lol.js",
+    },
+  },
+  "scripts": Object {
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "cli": "env NODE_ENV=\${NODE_ENV:-cli}",
+    "cz": "env NODE_ENV=\${NODE_ENV:-cli} git cz",
+    "lint": "eslint lol.js",
+    "preversion": "npm run lint",
+    "version": "npm run changelog && git add CHANGELOG.md",
+  },
+  "version": "0.0.0",
+}
+`;

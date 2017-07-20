@@ -1,0 +1,63 @@
+{
+  "name": "metapak-sencrop",
+  "version": "0.0.0",
+  "description": "A `metapak` plugin for Sencrop projects",
+  "main": "index.js",
+  "metapak": {
+    "configs": [
+      "main",
+      "tests",
+      "readme"
+    ],
+    "data": {
+      "files": "src/**/*.js"
+    }
+  },
+  "scripts": {
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "cli": "env NODE_ENV=${NODE_ENV:-cli}",
+    "cover": "jest --coverage",
+    "cz": "env NODE_ENV=${NODE_ENV:-cli} git cz",
+    "lint": "eslint src/**/*.js",
+    "metapak": "metapak || exit 0",
+    "postinstall": "npm run metapak --silent",
+    "preversion": "npm t && npm run lint",
+    "test": "jest",
+    "version": "npm run changelog && git add CHANGELOG.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sencrop/metapak-sencrop.git"
+  },
+  "keywords": [
+    "metapak"
+  ],
+  "author": "Nicolas Froidure (Sencrop)",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/sencrop/metapak-sencrop/issues"
+  },
+  "homepage": "https://github.com/sencrop/metapak-sencrop#readme",
+  "devDependencies": {
+    "commitizen": "^2.9.6",
+    "conventional-changelog-cli": "^1.2.0",
+    "cz-conventional-changelog": "^2.0.0",
+    "eslint": "3.16.0",
+    "eslint-config-simplifield": "4.1.1",
+    "istanbul": "0.4.5",
+    "jest": "20.0.4",
+    "metapak": "0.0.21",
+    "sinon": "2.3.8"
+  },
+  "engines": {
+    "node": ">=6.10.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "debug": "2.6.1"
+  }
+}

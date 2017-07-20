@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Assets transformer for www configs should build the README.md file 1`] = `
+Object {
+  "data": "<!-- something -->
+# module
+> A great module!
+
+
+## Usage
+Just require me
+
+# License
+[MIT](https://github.com/nfroidure/module/blob/master/LICENSE.md)
+",
+  "name": "README.md",
+}
+`;

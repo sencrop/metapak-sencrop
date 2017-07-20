@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Package transformer should work with an empty package.json 1`] = `
+Object {
+  "devDependencies": Object {
+    "istanbul": "0.4.5",
+    "jest": "20.0.4",
+    "sinon": "2.3.8",
+  },
+  "scripts": Object {
+    "cover": "jest --coverage",
+    "preversion": "npm t",
+    "test": "jest",
+  },
+}
+`;
