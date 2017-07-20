@@ -13,6 +13,7 @@ module.exports = {
   },
   globals: {
     expect: true,
+    jest: true,
   },
   rules: {
     'no-magic-numbers': 0,
