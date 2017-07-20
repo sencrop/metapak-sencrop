@@ -38,14 +38,14 @@ module.exports = (packageConf) => {
   packageConf.scripts.changelog = 'conventional-changelog -p angular -i CHANGELOG.md -s';
   packageConf.scripts.version = 'npm run changelog && git add CHANGELOG.md';
   packageConf.scripts.lint = `eslint ${metapakData.files}`;
-  packageConf.scripts.preversion = packageConf.scripts.preversion = (
+  packageConf.scripts.preversion = (
       packageConf.scripts.preversion ?
       packageConf.scripts.preversion +
       (
         /(^| && )npm run lint($| && )/
         .test(packageConf.scripts.preversion) ?
         '' :
-        ' &&  npm run lint'
+        ' && npm run lint'
       ) :
       'npm run lint'
     );
