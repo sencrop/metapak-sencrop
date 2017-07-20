@@ -1,3 +1,13 @@
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/sencrop/metapak-sencrop/compare/v1.0.0...v1.1.0) (2017-07-20)
+
+
+### Features
+
+* **Main config:** Add jest global to ESLint settings ([38212c4](https://github.com/sencrop/metapak-sencrop/commit/38212c4))
+
+
+
 <a name="1.0.0"></a>
 # 1.0.0 (2017-07-20)
 
