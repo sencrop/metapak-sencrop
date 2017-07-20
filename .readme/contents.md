@@ -20,6 +20,10 @@ Then add to your `package.json` file the
       "readme",
       "tests"
     ],
+    "data": {
+      // Files to Lint
+      "files": "src/**/*.js"
+    }
   },
 }
 ```
