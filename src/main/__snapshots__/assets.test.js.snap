@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Assets transformer should fill author in the LICENCE file 1`] = `
+exports[`Main Assets transformer should fill author in the LICENCE file 1`] = `
 Object {
   "data": "The MIT License (MIT)
 Copyright © 2017 <copyright holders>

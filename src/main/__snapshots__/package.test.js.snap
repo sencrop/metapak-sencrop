@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Package transformer should work with an empty package.json 1`] = `
+exports[`Main Package transformer should work with an empty package.json 1`] = `
 Object {
   "config": Object {
     "commitizen": Object {
