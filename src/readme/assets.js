@@ -1,7 +1,7 @@
 'use strict';
 
 const path = require('path');
-const USERNAME = 'nfroidure';
+const ORGANISATION_NAME = 'sencrop';
 
 module.exports = (file, packageConf, { PROJECT_DIR, glob, fs, log }) => {
   if('README.md' === file.name) {
@@ -19,7 +19,7 @@ module.exports = (file, packageConf, { PROJECT_DIR, glob, fs, log }) => {
       file.data = chunks.filter(_identity).join('\n') + '\n';
       file.data += '# License\n' +
       '[' + packageConf.license + '](https://github.com/' +
-      USERNAME + '/' + packageConf.name + '/blob/master/LICENSE.md)\n';
+      ORGANISATION_NAME + '/' + packageConf.name + '/blob/master/LICENSE.md)\n';
       return file;
     });
   }
