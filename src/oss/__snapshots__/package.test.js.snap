@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main Package transformer should work with an empty package.json 1`] = `
+Object {
+  "license": "MIT",
+}
+`;

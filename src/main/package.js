@@ -10,7 +10,6 @@ module.exports = (packageConf) => {
     packageConf.metapak.data :
     {};
 
-  // I mostly publish under MIT license, let's default to it
   packageConf.license = 'SEE LICENSE IN LICENSE.md';
 
   // Let's always start with the 0.0.0 version

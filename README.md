@@ -39,4 +39,4 @@ Then add to your `package.json` file the
 ```
 
 # License
-[SEE LICENSE IN LICENSE.md](https://github.com/sencrop/metapak-sencrop/blob/master/LICENSE.md)
+[MIT](https://github.com/sencrop/metapak-sencrop/blob/master/LICENSE.md)
