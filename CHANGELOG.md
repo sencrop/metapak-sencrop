@@ -1,3 +1,19 @@
+<a name="3.0.0"></a>
+# [3.0.0](https://github.com/sencrop/metapak-sencrop/compare/v2.0.0...v3.0.0) (2017-10-13)
+
+
+### Features
+
+* **Eslint config:** Remove ESLint from the main config ([007e5b6](https://github.com/sencrop/metapak-sencrop/commit/007e5b6))
+* **NPM:** Ignore package lock ([68ecd05](https://github.com/sencrop/metapak-sencrop/commit/68ecd05))
+
+
+### BREAKING CHANGES
+
+* **Eslint config:** Will necessit to add the eslint config manually on project that were relying on it
+
+
+
 <a name="2.0.0"></a>
 # [2.0.0](https://github.com/sencrop/metapak-sencrop/compare/v1.1.1...v2.0.0) (2017-10-12)
 
