@@ -36,7 +36,7 @@ module.exports = (packageConf) => {
   // Add the changelog stuffs
   packageConf.scripts.changelog = 'conventional-changelog -p angular -i CHANGELOG.md -s';
   packageConf.scripts.version = 'npm run changelog && git add CHANGELOG.md';
-  packageConf.scripts.lint = `eslint ${metapakData.files}`;
+  packageConf.scripts.lint = 'echo "WARNING: No linter configured"';
   packageConf.scripts.preversion = (
       packageConf.scripts.preversion ?
       packageConf.scripts.preversion +
@@ -53,8 +53,6 @@ module.exports = (packageConf) => {
 
   // Add the MUST HAVE dev dependencies
   packageConf.devDependencies = packageConf.devDependencies || {};
-  packageConf.devDependencies.eslint = '3.16.0';
-  packageConf.devDependencies['eslint-config-simplifield'] = '4.1.1';
   packageConf.devDependencies.commitizen = '^2.9.6';
   packageConf.devDependencies['cz-conventional-changelog'] = '^2.0.0';
   packageConf.devDependencies['conventional-changelog-cli'] = '^1.2.0';

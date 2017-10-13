@@ -12,8 +12,6 @@ Object {
     "commitizen": "^2.9.6",
     "conventional-changelog-cli": "^1.2.0",
     "cz-conventional-changelog": "^2.0.0",
-    "eslint": "3.16.0",
-    "eslint-config-simplifield": "4.1.1",
   },
   "engines": Object {
     "node": ">=6.10.0",
@@ -28,7 +26,7 @@ Object {
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "cli": "env NODE_ENV=\${NODE_ENV:-cli}",
     "cz": "env NODE_ENV=\${NODE_ENV:-cli} git cz",
-    "lint": "eslint lol.js",
+    "lint": "echo \\"WARNING: No linter configured\\"",
     "preversion": "npm run lint",
     "version": "npm run changelog && git add CHANGELOG.md",
   },

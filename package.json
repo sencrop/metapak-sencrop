@@ -19,7 +19,7 @@
     "cli": "env NODE_ENV=${NODE_ENV:-cli}",
     "cover": "jest --config=.jest.config.js --coverage",
     "cz": "env NODE_ENV=${NODE_ENV:-cli} git cz",
-    "lint": "eslint src/**/*.js",
+    "lint": "echo \"WARNING: No linter configured\"",
     "metapak": "metapak || exit 0",
     "postinstall": "npm run metapak --silent",
     "preversion": "npm t && npm run lint",
