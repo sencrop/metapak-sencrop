@@ -1,3 +1,13 @@
+<a name="3.0.1"></a>
+## [3.0.1](https://github.com/sencrop/metapak-sencrop/compare/v3.0.0...v3.0.1) (2017-10-17)
+
+
+### Bug Fixes
+
+* **Git:** Only convert to line feed in markdown docs ([79a5058](https://github.com/sencrop/metapak-sencrop/commit/79a5058))
+
+
+
 <a name="3.0.0"></a>
 # [3.0.0](https://github.com/sencrop/metapak-sencrop/compare/v2.0.0...v3.0.0) (2017-10-13)
 
