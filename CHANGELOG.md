@@ -1,3 +1,13 @@
+<a name="4.0.0"></a>
+# [4.0.0](https://github.com/sencrop/metapak-sencrop/compare/v3.0.2...v4.0.0) (2018-02-01)
+
+
+### Features
+
+* **Prettier:** Add prettier and update dependencies ([67b3fa6](https://github.com/sencrop/metapak-sencrop/commit/67b3fa6))
+
+
+
 <a name="3.0.2"></a>
 ## [3.0.2](https://github.com/sencrop/metapak-sencrop/compare/v3.0.1...v3.0.2) (2017-11-08)
 
