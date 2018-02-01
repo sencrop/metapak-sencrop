@@ -3,9 +3,9 @@
 exports[`Tests Package transformer should work with an empty package.json 1`] = `
 Object {
   "devDependencies": Object {
-    "istanbul": "0.4.5",
-    "jest": "20.0.4",
-    "sinon": "2.3.8",
+    "istanbul": "^0.4.5",
+    "jest": "^22.1.4",
+    "sinon": "^4.2.2",
   },
   "scripts": Object {
     "cover": "jest --config=.jest.config.js --coverage",

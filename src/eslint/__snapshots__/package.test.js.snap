@@ -2,10 +2,10 @@
 
 exports[`Main Package transformer should work with an empty package.json 1`] = `
 Object {
-  "dependencies": Object {},
   "devDependencies": Object {
-    "eslint": "3.16.0",
-    "eslint-config-simplifield": "4.1.1",
+    "eslint": "^4.16.0",
+    "eslint-plugin-prettier": "^2.5.0",
+    "prettier": "^1.10.2",
   },
   "metapak": Object {
     "data": Object {
@@ -14,6 +14,7 @@ Object {
   },
   "scripts": Object {
     "lint": "eslint lol.js",
+    "prettier": "prettier --write lol.js",
   },
 }
 `;
