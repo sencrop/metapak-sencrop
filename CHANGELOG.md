@@ -1,3 +1,13 @@
+<a name="4.0.1"></a>
+## [4.0.1](https://github.com/sencrop/metapak-sencrop/compare/v4.0.0...v4.0.1) (2018-02-05)
+
+
+### Bug Fixes
+
+* **Build:** Fix various issues with the last build ([12a540f](https://github.com/sencrop/metapak-sencrop/commit/12a540f))
+
+
+
 <a name="4.0.0"></a>
 # [4.0.0](https://github.com/sencrop/metapak-sencrop/compare/v3.0.2...v4.0.0) (2018-02-01)
 
