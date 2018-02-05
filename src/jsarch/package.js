@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 module.exports = packageConf => {
   const metapakData =
@@ -9,10 +9,10 @@ module.exports = packageConf => {
   // Adding documentation generation script
   packageConf.scripts = packageConf.scripts || {};
   packageConf.scripts.architecture =
-    "jsarch " + metapakData.files + " > ARCHITECTURE.md";
+    'jsarch ' + metapakData.files + ' > ARCHITECTURE.md';
   // Add doc deps
   packageConf.devDependencies = packageConf.devDependencies || {};
-  packageConf.devDependencies.jsarch = "1.2.7";
+  packageConf.devDependencies.jsarch = '1.2.7';
 
   return packageConf;
 };

@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 module.exports = packageConf => {
   const metapakData =
@@ -9,15 +9,15 @@ module.exports = packageConf => {
   // Adding documentation generation script
   packageConf.scripts = packageConf.scripts || {};
   packageConf.scripts.doc =
-    "mkdir -p .readme;" +
+    'mkdir -p .readme;' +
     ' echo "# API" > .readme/API.md;' +
-    " jsdoc2md " +
+    ' jsdoc2md ' +
     metapakData.files +
-    " >> .readme/API.md";
+    ' >> .readme/API.md';
 
   // Add doc deps
   packageConf.devDependencies = packageConf.devDependencies || {};
-  packageConf.devDependencies["jsdoc-to-markdown"] = "^4.0.1";
+  packageConf.devDependencies['jsdoc-to-markdown'] = '^4.0.1';
 
   return packageConf;
 };

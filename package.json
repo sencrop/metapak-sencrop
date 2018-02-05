@@ -8,8 +8,8 @@
       "main",
       "tests",
       "readme",
-      "oss",
-      "eslint"
+      "eslint",
+      "oss"
     ],
     "data": {
       "files": "src/**/*.js"
@@ -20,9 +20,8 @@
     "cli": "env NODE_ENV=${NODE_ENV:-cli}",
     "cover": "jest --config=.jest.config.js --coverage",
     "cz": "env NODE_ENV=${NODE_ENV:-cli} git cz",
-    "lint": "echo \"WARNING: No linter configured\"",
-    "metapak": "metapak || exit 0",
-    "postinstall": "npm run metapak --silent",
+    "lint": "eslint src/**/*.js",
+    "metapak": "metapak",
     "prettier": "prettier --write src/**/*.js",
     "preversion": "npm t && npm run lint",
     "test": "jest --config=.jest.config.js",
@@ -49,7 +48,7 @@
     "eslint-plugin-prettier": "^2.5.0",
     "istanbul": "^0.4.5",
     "jest": "^22.1.4",
-    "metapak": "0.0.21",
+    "metapak": "^1.0.2",
     "prettier": "^1.10.2",
     "sinon": "^4.2.2"
   },

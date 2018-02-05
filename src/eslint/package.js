@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 module.exports = packageConf => {
   const metapakData =
@@ -7,19 +7,19 @@ module.exports = packageConf => {
       : {};
 
   if (!metapakData.files) {
-    throw new Error("E_NO_FILES");
+    throw new Error('E_NO_FILES');
   }
 
   packageConf.scripts = packageConf.scripts || {};
-  packageConf.scripts.lint = "eslint " + metapakData.files;
-  packageConf.scripts.prettier = "prettier --write " + metapakData.files;
+  packageConf.scripts.lint = 'eslint ' + metapakData.files;
+  packageConf.scripts.prettier = 'prettier --write ' + metapakData.files;
 
   // Add the MUST HAVE dev dependencies
   packageConf.devDependencies = packageConf.devDependencies || {};
-  packageConf.devDependencies.eslint = "^4.16.0";
-  delete packageConf.devDependencies["eslint-config-simplifield"];
-  packageConf.devDependencies.prettier = "^1.10.2";
-  packageConf.devDependencies["eslint-plugin-prettier"] = "^2.5.0";
+  packageConf.devDependencies.eslint = '^4.16.0';
+  delete packageConf.devDependencies['eslint-config-simplifield'];
+  packageConf.devDependencies.prettier = '^1.10.2';
+  packageConf.devDependencies['eslint-plugin-prettier'] = '^2.5.0';
 
   return packageConf;
 };

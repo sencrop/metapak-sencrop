@@ -1,7 +1,7 @@
-"use strict";
+'use strict';
 
 module.exports = packageConf => {
-  packageConf.license = "MIT";
+  packageConf.license = 'MIT';
 
   return packageConf;
 };

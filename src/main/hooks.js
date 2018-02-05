@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 const COMMIT_MSG_COMMITIZEN_CHECK = `
 if [ "$NODE_ENV" != "cli" ] ; then
@@ -11,14 +11,14 @@ if [ "$NODE_ENV" != "cli" ] ; then
     exit 1;
   fi
 fi`;
-const PRE_COMMIT_QUALITY_CHECK = "npm run lint || exit 1";
-const PRE_COMMIT_METAPAK_RUN = "npm run metapak || exit 1";
+const PRE_COMMIT_QUALITY_CHECK = 'npm run lint || exit 1';
+const PRE_COMMIT_METAPAK_RUN = 'npm run metapak || exit 1';
 
 module.exports = hooks => {
-  hooks["pre-commit"] = hooks["pre-commit"] || [];
-  hooks["pre-commit"].push(PRE_COMMIT_METAPAK_RUN);
-  hooks["pre-commit"].push(PRE_COMMIT_QUALITY_CHECK);
-  hooks["commit-msg"] = hooks["commit-msg"] || [];
-  hooks["commit-msg"].push(COMMIT_MSG_COMMITIZEN_CHECK);
+  hooks['pre-commit'] = hooks['pre-commit'] || [];
+  hooks['pre-commit'].push(PRE_COMMIT_METAPAK_RUN);
+  hooks['pre-commit'].push(PRE_COMMIT_QUALITY_CHECK);
+  hooks['commit-msg'] = hooks['commit-msg'] || [];
+  hooks['commit-msg'].push(COMMIT_MSG_COMMITIZEN_CHECK);
   return hooks;
 };
