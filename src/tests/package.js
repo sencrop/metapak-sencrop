@@ -14,9 +14,9 @@ module.exports = packageConf => {
 
   // Add the testing dev dependencies
   packageConf.devDependencies = packageConf.devDependencies || {};
-  packageConf.devDependencies.jest = '^22.1.4';
-  packageConf.devDependencies.sinon = '^4.2.2';
-  packageConf.devDependencies.istanbul = '^0.4.5';
+  packageConf.devDependencies.jest = '^22.4.3';
+  packageConf.devDependencies.sinon = '^5.0.3';
+  delete packageConf.devDependencies.istanbul;
 
   return packageConf;
 };

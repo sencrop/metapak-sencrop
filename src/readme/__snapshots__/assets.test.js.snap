@@ -7,8 +7,14 @@ Object {
 > A great module!
 
 
+
+[//]: # (::contents:start)
+
 ## Usage
 Just require me
+
+
+[//]: # (::contents:end)
 
 # License
 [MIT](https://github.com/sencrop/module/blob/master/LICENSE.md)

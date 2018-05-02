@@ -4,5 +4,6 @@
 // in your metapak module
 module.exports = {
   lastNodeLTS: '6.10.0',
-  lastNode: '7.5.0',
+  lastNode: '10.0.0',
+  apiPath: 'API.md',
 };

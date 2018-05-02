@@ -8,6 +8,9 @@
 > A `metapak` plugin for Sencrop projects
 
 
+
+[//]: # (::contents:start)
+
 This `metapak` plug-in allows us to
  have consistent development environments
   across our various projects.
@@ -37,6 +40,8 @@ Then add to your `package.json` file the
   },
 }
 ```
+
+[//]: # (::contents:end)
 
 # License
 [MIT](https://github.com/sencrop/metapak-sencrop/blob/master/LICENSE.md)
