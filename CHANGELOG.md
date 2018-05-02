@@ -1,3 +1,8 @@
+<a name="5.0.0"></a>
+# [5.0.0](https://github.com/sencrop/metapak-sencrop/compare/v4.1.0...v5.0.0) (2018-05-02)
+
+
+
 <a name="4.1.0"></a>
 # [4.1.0](https://github.com/sencrop/metapak-sencrop/compare/v4.0.1...v4.1.0) (2018-02-05)
 
