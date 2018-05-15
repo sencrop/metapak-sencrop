@@ -1,3 +1,13 @@
+<a name="5.1.0"></a>
+# [5.1.0](https://github.com/sencrop/metapak-sencrop/compare/v5.0.0...v5.1.0) (2018-05-15)
+
+
+### Features
+
+* **Main:** Add more files extensions for git attributes ([50a76be](https://github.com/sencrop/metapak-sencrop/commit/50a76be))
+
+
+
 <a name="5.0.0"></a>
 # [5.0.0](https://github.com/sencrop/metapak-sencrop/compare/v4.1.0...v5.0.0) (2018-05-02)
 
