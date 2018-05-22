@@ -1,3 +1,13 @@
+<a name="5.1.1"></a>
+## [5.1.1](https://github.com/sencrop/metapak-sencrop/compare/v5.1.0...v5.1.1) (2018-05-22)
+
+
+### Bug Fixes
+
+* **Tests:** Ensure to always run tests in test env ([bb3f689](https://github.com/sencrop/metapak-sencrop/commit/bb3f689))
+
+
+
 <a name="5.1.0"></a>
 # [5.1.0](https://github.com/sencrop/metapak-sencrop/compare/v5.0.0...v5.1.0) (2018-05-15)
 
