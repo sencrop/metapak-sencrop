@@ -62,5 +62,11 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "dependencies": {}
+  "dependencies": {},
+  "jest": {
+    "coverageReporters": [
+      "lcov"
+    ],
+    "testEnvironment": "node"
+  }
 }
