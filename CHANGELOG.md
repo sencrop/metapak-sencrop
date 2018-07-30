@@ -1,3 +1,13 @@
+<a name="5.1.2"></a>
+## [5.1.2](https://github.com/sencrop/metapak-sencrop/compare/v5.1.1...v5.1.2) (2018-07-30)
+
+
+### Bug Fixes
+
+* **Tests config:** Set the Jest config to the node environment ([89c505a](https://github.com/sencrop/metapak-sencrop/commit/89c505a))
+
+
+
 <a name="5.1.1"></a>
 ## [5.1.1](https://github.com/sencrop/metapak-sencrop/compare/v5.1.0...v5.1.1) (2018-05-22)
 
