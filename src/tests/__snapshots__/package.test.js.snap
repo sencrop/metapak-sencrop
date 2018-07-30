@@ -13,9 +13,9 @@ Object {
     "testEnvironment": "node",
   },
   "scripts": Object {
-    "cover": "jest --config=.jest.config.js --coverage",
+    "cover": "jest --coverage",
     "preversion": "npm t",
-    "test": "jest --config=.jest.config.js",
+    "test": "jest",
   },
 }
 `;

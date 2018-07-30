@@ -3,8 +3,8 @@
 module.exports = packageConf => {
   // Let's add test scripts
   packageConf.scripts = packageConf.scripts || {};
-  packageConf.scripts.test = 'jest --config=.jest.config.js';
-  packageConf.scripts.cover = 'jest --config=.jest.config.js --coverage';
+  packageConf.scripts.test = 'jest';
+  packageConf.scripts.cover = 'jest --coverage';
   packageConf.scripts.preversion = packageConf.scripts.preversion
     ? packageConf.scripts.preversion +
       (/(^| && )npm t($| && )/.test(packageConf.scripts.preversion)

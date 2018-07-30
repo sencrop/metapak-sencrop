@@ -30,7 +30,7 @@ module.exports = (file, packageConf) => {
     file.data = file.data.replace(/<lastNodeLTS>/gm, config.lastNodeLTS);
   }
 
-  // Add snippets
+  // Add files to `.gitignore`
   if (
     file.name.endsWith('.gitignore') &&
     metapakData.ignore &&
@@ -41,6 +41,11 @@ module.exports = (file, packageConf) => {
       '# Project custom ignored file\n' +
       metapakData.ignore.join('\n') +
       '\n';
+  }
+
+  // Empty files are returned as is
+  if (file.name !== '' && file.data == '') {
+    return file;
   }
 
   // Add snippets
