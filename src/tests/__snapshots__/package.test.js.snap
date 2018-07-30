@@ -6,6 +6,12 @@ Object {
     "jest": "^22.4.3",
     "sinon": "^5.0.3",
   },
+  "jest": Object {
+    "coverageReporters": Array [
+      "lcov",
+    ],
+    "testEnvironment": "node",
+  },
   "scripts": Object {
     "cover": "jest --config=.jest.config.js --coverage",
     "preversion": "npm t",

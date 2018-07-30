@@ -12,6 +12,12 @@ module.exports = packageConf => {
         : ' && npm t')
     : 'npm t';
 
+  // Add the jest config
+  packageConf.jest = {
+    coverageReporters: ['lcov'],
+    testEnvironment: 'node',
+  };
+
   // Add the testing dev dependencies
   packageConf.devDependencies = packageConf.devDependencies || {};
   packageConf.devDependencies.jest = '^22.4.3';
