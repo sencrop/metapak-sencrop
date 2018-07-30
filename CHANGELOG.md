@@ -1,3 +1,13 @@
+<a name="5.1.3"></a>
+## [5.1.3](https://github.com/sencrop/metapak-sencrop/compare/v5.1.2...v5.1.3) (2018-07-30)
+
+
+### Bug Fixes
+
+* **Test/Assets config:** Fix Jest tests ([bcc4713](https://github.com/sencrop/metapak-sencrop/commit/bcc4713))
+
+
+
 <a name="5.1.2"></a>
 ## [5.1.2](https://github.com/sencrop/metapak-sencrop/compare/v5.1.1...v5.1.2) (2018-07-30)
 
