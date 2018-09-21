@@ -19,7 +19,7 @@ module.exports = packageConf => {
   packageConf.devDependencies.eslint = '^5.6.0';
   packageConf.devDependencies.prettier = '^1.14.3';
   packageConf.devDependencies['eslint-plugin-prettier'] = '^2.6.2';
-  packageConf.devDependencies['eslint-plugin-import'] = '^2.6.2';
+  packageConf.devDependencies['eslint-plugin-import'] = '^2.14.0';
 
   // Add eslint config
   packageConf.eslintConfig = {

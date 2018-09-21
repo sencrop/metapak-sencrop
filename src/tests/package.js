@@ -1,16 +1,27 @@
 'use strict';
 
+const { ensureScript } = require('../utils');
+
+const TEST_SCRIPT = 'npm t';
+const JEST_SCRIPT = 'npm run jest';
+
 module.exports = packageConf => {
   // Let's add test scripts
   packageConf.scripts = packageConf.scripts || {};
-  packageConf.scripts.test = 'jest';
-  packageConf.scripts.cover = 'jest --coverage';
-  packageConf.scripts.preversion = packageConf.scripts.preversion
-    ? packageConf.scripts.preversion +
-      (/(^| && )npm t($| && )/.test(packageConf.scripts.preversion)
-        ? ''
-        : ' && npm t')
-    : 'npm t';
+  packageConf.scripts.jest = 'NODE_ENV=${NODE_ENV:-test} jest';
+  packageConf.scripts.cover = 'NODE_ENV=${NODE_ENV:-test} jest --coverage';
+  packageConf.scripts.test = ensureScript(
+    packageConf.scripts.test,
+    JEST_SCRIPT,
+  );
+  packageConf.scripts.preversion = ensureScript(
+    packageConf.scripts.preversion,
+    TEST_SCRIPT,
+  );
+  packageConf.scripts.precz = ensureScript(
+    packageConf.scripts.precz,
+    TEST_SCRIPT,
+  );
 
   // Add the jest config
   packageConf.jest = {

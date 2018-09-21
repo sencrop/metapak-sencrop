@@ -14,14 +14,11 @@ if [ "$NODE_ENV" != "cli" ] ; then
     exit 1;
   fi
 fi`;
-const PRE_COMMIT_QUALITY_CHECK = 'npm run lint || exit 1';
-const PRE_COMMIT_METAPAK_RUN = 'npm run metapak || exit 1';
 
 describe('Main', () => {
   describe('Hooks transformer', () => {
     it('should add pre-commit hooks', () => {
       assert.deepEqual(hooksTransformer({}), {
-        'pre-commit': [PRE_COMMIT_METAPAK_RUN, PRE_COMMIT_QUALITY_CHECK],
         'commit-msg': [COMMIT_MSG_COMMITIZEN_CHECK],
       });
     });

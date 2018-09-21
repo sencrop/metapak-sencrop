@@ -13,9 +13,11 @@ Object {
     "testEnvironment": "node",
   },
   "scripts": Object {
-    "cover": "jest --coverage",
+    "cover": "NODE_ENV=\${NODE_ENV:-test} jest --coverage",
+    "jest": "NODE_ENV=\${NODE_ENV:-test} jest",
+    "precz": "npm t",
     "preversion": "npm t",
-    "test": "jest",
+    "test": "npm run jest",
   },
 }
 `;

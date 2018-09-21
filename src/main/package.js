@@ -1,8 +1,11 @@
 'use strict';
 
 const config = require('../config.js');
+const { ensureScript } = require('../utils');
 
 const GITHUB_REPOSITORY_REGEXP = /git\+https:\/\/github.com\/([a-zA-Z0-9-]+)\/([a-zA-Z0-9-]+)\.git/;
+const LINT_SCRIPT = 'npm run lint';
+const METAPAK_CHECK_SCRIPT = 'npm run metapak -- -s';
 
 module.exports = packageConf => {
   packageConf.license = 'SEE LICENSE IN LICENSE.md';
@@ -21,6 +24,14 @@ module.exports = packageConf => {
   packageConf.scripts.cli = 'env NODE_ENV=${NODE_ENV:-cli}';
 
   // Lets use commitizen
+  packageConf.scripts.precz = ensureScript(
+    packageConf.scripts.precz,
+    LINT_SCRIPT,
+  );
+  packageConf.scripts.precz = ensureScript(
+    packageConf.scripts.precz,
+    METAPAK_CHECK_SCRIPT,
+  );
   packageConf.scripts.cz = 'env NODE_ENV=${NODE_ENV:-cli} git cz';
   packageConf.config = {
     commitizen: {
@@ -33,14 +44,14 @@ module.exports = packageConf => {
     'conventional-changelog -p angular -i CHANGELOG.md -s';
   packageConf.scripts.version = 'npm run changelog && git add CHANGELOG.md';
   packageConf.scripts.lint = 'echo "WARNING: No linter configured"';
-  packageConf.scripts.preversion = packageConf.scripts.preversion
-    ? packageConf.scripts.preversion +
-      (/(^| && )npm run lint($| && )/.test(packageConf.scripts.preversion)
-        ? ''
-        : ' && npm run lint')
-    : 'npm run lint';
-  // Add the MUST HAVE dependencies:
-  packageConf.dependencies = packageConf.dependencies || {};
+  packageConf.scripts.preversion = ensureScript(
+    packageConf.scripts.preversion,
+    LINT_SCRIPT,
+  );
+  packageConf.scripts.preversion = ensureScript(
+    packageConf.scripts.preversion,
+    METAPAK_CHECK_SCRIPT,
+  );
 
   // Add the MUST HAVE dev dependencies
   packageConf.devDependencies = packageConf.devDependencies || {};

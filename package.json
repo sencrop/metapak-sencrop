@@ -18,13 +18,15 @@
   "scripts": {
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "cli": "env NODE_ENV=${NODE_ENV:-cli}",
-    "cover": "jest --coverage",
+    "cover": "NODE_ENV=${NODE_ENV:-test} jest --coverage",
     "cz": "env NODE_ENV=${NODE_ENV:-cli} git cz",
+    "jest": "NODE_ENV=${NODE_ENV:-test} jest",
     "lint": "eslint src/**/*.js",
     "metapak": "metapak",
+    "precz": "npm run lint && npm run metapak -- -s && npm t",
     "prettier": "prettier --write src/**/*.js",
-    "preversion": "npm t && npm run lint",
-    "test": "jest",
+    "preversion": "npm t && npm run lint && npm run metapak -- -s",
+    "test": "npm run jest",
     "version": "npm run changelog && git add CHANGELOG.md"
   },
   "repository": {
@@ -48,7 +50,7 @@
     "conventional-changelog-cli": "^2.0.5",
     "cz-conventional-changelog": "^2.1.0",
     "eslint": "^5.6.0",
-    "eslint-plugin-import": "^2.6.2",
+    "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-prettier": "^2.6.2",
     "jest": "^23.6.0",
     "metapak": "^1.0.3",
@@ -63,7 +65,9 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "dependencies": {},
+  "dependencies": {
+    "escape-string-regexp": "^1.0.5"
+  },
   "jest": {
     "coverageReporters": [
       "lcov"
