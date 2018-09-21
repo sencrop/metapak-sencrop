@@ -10,10 +10,13 @@ module.exports = packageConf => {
   packageConf.scripts = packageConf.scripts || {};
   packageConf.scripts.doc =
     'mkdir -p .readme;' +
-    ' echo "# API" > .readme/API.md;' +
+    ' echo "# API" > API.md;' +
     ' jsdoc2md ' +
     metapakData.files +
-    ' >> .readme/API.md';
+    ' >> API.md';
+
+  // Ignore the API.md file
+  metapakData.ignore = [...new Set([...(metapakData.ignore || []), 'API.md'])];
 
   // Add doc deps
   packageConf.devDependencies = packageConf.devDependencies || {};

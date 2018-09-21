@@ -15,5 +15,21 @@ describe('JSDocs', () => {
         }),
       ).toMatchSnapshot();
     });
+
+    it('should work with an existing package.json', () => {
+      expect(
+        packageTransformer({
+          scripts: {
+            doc: 'yolo',
+          },
+          metapak: {
+            data: {
+              files: 'yolo.js',
+              ignore: ['API.md'],
+            },
+          },
+        }),
+      ).toMatchSnapshot();
+    });
   });
 });

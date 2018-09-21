@@ -8,10 +8,32 @@ Object {
   "metapak": Object {
     "data": Object {
       "files": "yolo.js",
+      "ignore": Array [
+        "API.md",
+      ],
     },
   },
   "scripts": Object {
-    "doc": "mkdir -p .readme; echo \\"# API\\" > .readme/API.md; jsdoc2md yolo.js >> .readme/API.md",
+    "doc": "mkdir -p .readme; echo \\"# API\\" > API.md; jsdoc2md yolo.js >> API.md",
+  },
+}
+`;
+
+exports[`JSDocs Package transformer for jsdocs should work with an existing package.json 1`] = `
+Object {
+  "devDependencies": Object {
+    "jsdoc-to-markdown": "^4.0.1",
+  },
+  "metapak": Object {
+    "data": Object {
+      "files": "yolo.js",
+      "ignore": Array [
+        "API.md",
+      ],
+    },
+  },
+  "scripts": Object {
+    "doc": "mkdir -p .readme; echo \\"# API\\" > API.md; jsdoc2md yolo.js >> API.md",
   },
 }
 `;
