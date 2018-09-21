@@ -12,7 +12,7 @@ describe('JSDocs', () => {
               files: 'yolo.js',
             },
           },
-        })
+        }),
       ).toMatchSnapshot();
     });
   });

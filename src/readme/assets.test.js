@@ -35,7 +35,7 @@ describe('Readme', () => {
           PROJECT_DIR,
           fs,
           log,
-        }
+        },
       )
         .then(file => {
           expect(file).toMatchSnapshot();
@@ -52,12 +52,12 @@ describe('Readme', () => {
             data: 'Carpe diem\n',
           },
           {},
-          {}
+          {},
         ),
         {
           name: 'YOLO',
           data: 'Carpe diem\n',
-        }
+        },
       );
     });
   });

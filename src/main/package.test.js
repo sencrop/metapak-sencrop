@@ -12,7 +12,7 @@ describe('Main', () => {
               files: 'lol.js',
             },
           },
-        })
+        }),
       ).toMatchSnapshot();
     });
   });

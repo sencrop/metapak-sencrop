@@ -3,14 +3,42 @@
 exports[`Main Package transformer should work with an empty package.json 1`] = `
 Object {
   "devDependencies": Object {
-    "eslint": "^4.19.1",
-    "eslint-plugin-prettier": "^2.6.0",
-    "prettier": "^1.12.1",
+    "eslint": "^5.6.0",
+    "eslint-plugin-import": "^2.6.2",
+    "eslint-plugin-prettier": "^2.6.2",
+    "prettier": "^1.14.3",
+  },
+  "eslintConfig": Object {
+    "env": Object {
+      "es6": true,
+      "jest": true,
+      "mocha": true,
+      "node": true,
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": Object {
+      "ecmaVersion": 9,
+      "sourceType": "module",
+    },
+    "plugins": Array [
+      "prettier",
+      "import",
+    ],
+    "rules": Object {
+      "prettier/prettier": "error",
+    },
   },
   "metapak": Object {
     "data": Object {
       "files": "lol.js",
     },
+  },
+  "prettier": Object {
+    "printWidth": 80,
+    "proseWrap": "always",
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "all",
   },
   "scripts": Object {
     "lint": "eslint lol.js",

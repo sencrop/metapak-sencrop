@@ -12,7 +12,7 @@ module.exports = packageConf => {
     'jsarch ' + metapakData.files + ' > ARCHITECTURE.md';
   // Add doc deps
   packageConf.devDependencies = packageConf.devDependencies || {};
-  packageConf.devDependencies.jsarch = '1.2.7';
+  packageConf.devDependencies.jsarch = '^1.3.0';
 
   return packageConf;
 };

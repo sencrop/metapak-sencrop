@@ -13,8 +13,8 @@ describe('Main', () => {
             data:
               'The MIT License (MIT)\nCopyright © 2017 <copyright holders>\n',
           },
-          {}
-        )
+          {},
+        ),
       ).toMatchSnapshot();
     });
 
@@ -25,12 +25,12 @@ describe('Main', () => {
             name: 'YOLO',
             data: 'Carpe diem\n',
           },
-          {}
+          {},
         ),
         {
           name: 'YOLO',
           data: 'Carpe diem\n',
-        }
+        },
       );
     });
   });

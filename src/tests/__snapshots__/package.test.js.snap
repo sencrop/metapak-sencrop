@@ -3,8 +3,8 @@
 exports[`Tests Package transformer should work with an empty package.json 1`] = `
 Object {
   "devDependencies": Object {
-    "jest": "^22.4.3",
-    "sinon": "^5.0.3",
+    "jest": "^23.6.0",
+    "sinon": "^6.3.4",
   },
   "jest": Object {
     "coverageReporters": Array [

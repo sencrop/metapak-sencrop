@@ -20,7 +20,7 @@ describe('Architecture', () => {
         }),
         {
           'pre-commit': ['npm t', PRE_COMMIT_ARCHITECTURE],
-        }
+        },
       );
     });
   });

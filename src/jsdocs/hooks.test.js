@@ -20,7 +20,7 @@ describe('JSDocs', () => {
         }),
         {
           'pre-commit': ['npm t', PRE_COMMIT_DOC],
-        }
+        },
       );
     });
   });

@@ -16,10 +16,38 @@ module.exports = packageConf => {
 
   // Add the MUST HAVE dev dependencies
   packageConf.devDependencies = packageConf.devDependencies || {};
-  packageConf.devDependencies.eslint = '^4.19.1';
-  delete packageConf.devDependencies['eslint-config-simplifield'];
-  packageConf.devDependencies.prettier = '^1.12.1';
-  packageConf.devDependencies['eslint-plugin-prettier'] = '^2.6.0';
+  packageConf.devDependencies.eslint = '^5.6.0';
+  packageConf.devDependencies.prettier = '^1.14.3';
+  packageConf.devDependencies['eslint-plugin-prettier'] = '^2.6.2';
+  packageConf.devDependencies['eslint-plugin-import'] = '^2.6.2';
+
+  // Add eslint config
+  packageConf.eslintConfig = {
+    extends: 'eslint:recommended',
+    parserOptions: {
+      sourceType: 'module',
+      ecmaVersion: 9,
+    },
+    env: {
+      es6: true,
+      node: true,
+      jest: true,
+      mocha: true,
+    },
+    plugins: ['prettier', 'import'],
+    rules: {
+      'prettier/prettier': 'error',
+    },
+  };
+
+  // Add prettier config
+  packageConf.prettier = {
+    semi: true,
+    printWidth: 80,
+    singleQuote: true,
+    trailingComma: 'all',
+    proseWrap: 'always',
+  };
 
   return packageConf;
 };

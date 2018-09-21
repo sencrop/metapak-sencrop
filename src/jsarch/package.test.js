@@ -12,7 +12,7 @@ describe('Architecture', () => {
               files: 'yolo.js',
             },
           },
-        })
+        }),
       ).toMatchSnapshot();
     });
   });
