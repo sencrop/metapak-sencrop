@@ -16,6 +16,37 @@ Just require me
 
 [//]: # (::contents:end)
 
+# Useful resources
+- [Changelog](./CHANGELOG.md)
+
+# License
+[MIT](https://github.com/sencrop/module/blob/master/LICENSE.md)
+",
+  "name": "README.md",
+}
+`;
+
+exports[`Readme Assets transformer for www configs should build the README.md file with links 1`] = `
+Object {
+  "data": "<!-- something -->
+# module
+> A great module!
+
+
+
+[//]: # (::contents:start)
+
+## Usage
+Just require me
+
+
+[//]: # (::contents:end)
+
+# Useful resources
+- [API documentation](./API.md)
+- [Architecture Notes](./ARCHITECTURE.md)
+- [Changelog](./CHANGELOG.md)
+
 # License
 [MIT](https://github.com/sencrop/module/blob/master/LICENSE.md)
 ",

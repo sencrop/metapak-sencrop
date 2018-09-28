@@ -5,5 +5,4 @@
 module.exports = {
   lastNodeLTS: '8.10.0',
   lastNode: '10.11.0',
-  apiPath: 'API.md',
 };

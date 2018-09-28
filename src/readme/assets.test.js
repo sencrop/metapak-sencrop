@@ -18,7 +18,6 @@ describe('Readme', () => {
       fs.readFileAsync
         .onFirstCall()
         .returns(Promise.resolve('## Usage\nJust require me\n'));
-      fs.readFileAsync.onSecondCall().returns(Promise.resolve(''));
 
       assetsTransformer(
         {
@@ -28,6 +27,44 @@ describe('Readme', () => {
         {
           name: 'module',
           description: 'A great module!',
+          devDependencies: {},
+          license: 'MIT',
+        },
+        {
+          PROJECT_DIR,
+          fs,
+          log,
+        },
+      )
+        .then(file => {
+          expect(file).toMatchSnapshot();
+        })
+        .then(done)
+        .catch(done);
+    });
+
+    it('should build the README.md file with links', done => {
+      const fs = {
+        readFileAsync: sinon.stub(),
+      };
+      const PROJECT_DIR = '/lol/';
+      const log = {
+        error: sinon.stub,
+      };
+
+      fs.readFileAsync
+        .onFirstCall()
+        .returns(Promise.resolve('## Usage\nJust require me\n'));
+
+      assetsTransformer(
+        {
+          name: 'README.md',
+          data: '<!-- something -->\n',
+        },
+        {
+          name: 'module',
+          description: 'A great module!',
+          metapak: { configs: ['jsarch', 'jsdocs'] },
           devDependencies: {},
           license: 'MIT',
         },

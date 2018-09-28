@@ -44,5 +44,8 @@ Then add to your `package.json` file the
 
 [//]: # (::contents:end)
 
+# Useful resources
+- [Changelog](./CHANGELOG.md)
+
 # License
 [MIT](https://github.com/sencrop/metapak-sencrop/blob/master/LICENSE.md)
