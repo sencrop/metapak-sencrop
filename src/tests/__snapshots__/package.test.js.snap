@@ -11,6 +11,10 @@ Object {
       "lcov",
     ],
     "testEnvironment": "node",
+    "testPathIgnorePatterns": Array [
+      "/node_modules/",
+      "/dist/",
+    ],
   },
   "scripts": Object {
     "cover": "NODE_ENV=\${NODE_ENV:-test} jest --coverage",

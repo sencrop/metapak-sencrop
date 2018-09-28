@@ -27,6 +27,7 @@ module.exports = packageConf => {
   packageConf.jest = {
     coverageReporters: ['lcov'],
     testEnvironment: 'node',
+    testPathIgnorePatterns: ['/node_modules/', '/dist/'],
   };
 
   // Add the testing dev dependencies

@@ -72,7 +72,11 @@
     "coverageReporters": [
       "lcov"
     ],
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/dist/"
+    ]
   },
   "eslintConfig": {
     "extends": "eslint:recommended",
