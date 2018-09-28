@@ -1,3 +1,18 @@
+<a name="6.1.0"></a>
+# [6.1.0](https://github.com/sencrop/metapak-sencrop/compare/v6.0.1...v6.1.0) (2018-09-28)
+
+
+### Bug Fixes
+
+* **Readme config:** Removing old forgotten stuffs ([ef4f935](https://github.com/sencrop/metapak-sencrop/commit/ef4f935))
+
+
+### Features
+
+* **Main config:** Add a warning for unstaged changes ([7acc4fd](https://github.com/sencrop/metapak-sencrop/commit/7acc4fd))
+
+
+
 <a name="6.0.1"></a>
 ## [6.0.1](https://github.com/sencrop/metapak-sencrop/compare/v6.0.0...v6.0.1) (2018-09-21)
 
