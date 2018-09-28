@@ -8,9 +8,6 @@ Object {
   "metapak": Object {
     "data": Object {
       "files": "yolo.js",
-      "ignore": Array [
-        "API.md",
-      ],
     },
   },
   "scripts": Object {

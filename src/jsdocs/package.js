@@ -11,9 +11,6 @@ module.exports = packageConf => {
   packageConf.scripts.doc =
     ' echo "# API" > API.md;' + ' jsdoc2md ' + metapakData.files + ' >> API.md';
 
-  // Ignore the API.md file
-  metapakData.ignore = [...new Set([...(metapakData.ignore || []), 'API.md'])];
-
   // Add doc deps
   packageConf.devDependencies = packageConf.devDependencies || {};
   packageConf.devDependencies['jsdoc-to-markdown'] = '^4.0.1';
