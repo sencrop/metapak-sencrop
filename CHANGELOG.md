@@ -1,3 +1,13 @@
+<a name="6.3.1"></a>
+## [6.3.1](https://github.com/sencrop/metapak-sencrop/compare/v6.3.0...v6.3.1) (2018-09-28)
+
+
+### Bug Fixes
+
+* **JSDocs config:** Stop ignoring tge the API.md file ([e2e9bbc](https://github.com/sencrop/metapak-sencrop/commit/e2e9bbc))
+
+
+
 <a name="6.3.0"></a>
 # [6.3.0](https://github.com/sencrop/metapak-sencrop/compare/v6.2.0...v6.3.0) (2018-09-28)
 
