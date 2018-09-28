@@ -1,6 +1,6 @@
 'use strict';
 
-const PRE_COMMIT_DOC = 'npm run doc && git add .readme/API.md';
+const PRE_COMMIT_DOC = 'npm run doc && git add API.md';
 
 const assert = require('assert');
 const hooksTransformer = require('./hooks');
