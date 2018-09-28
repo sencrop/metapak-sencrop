@@ -1,3 +1,13 @@
+<a name="6.3.2"></a>
+## [6.3.2](https://github.com/sencrop/metapak-sencrop/compare/v6.3.1...v6.3.2) (2018-09-28)
+
+
+### Bug Fixes
+
+* **Tests config:** Avoid testing the dist files ([e0ed5cc](https://github.com/sencrop/metapak-sencrop/commit/e0ed5cc))
+
+
+
 <a name="6.3.1"></a>
 ## [6.3.1](https://github.com/sencrop/metapak-sencrop/compare/v6.3.0...v6.3.1) (2018-09-28)
 
