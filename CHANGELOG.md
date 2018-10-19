@@ -1,3 +1,13 @@
+<a name="6.4.1"></a>
+## [6.4.1](https://github.com/sencrop/metapak-sencrop/compare/v6.4.0...v6.4.1) (2018-10-19)
+
+
+### Features
+
+* **Jest config:** Allow to specify roots of Jest tests ([254d389](https://github.com/sencrop/metapak-sencrop/commit/254d389))
+
+
+
 <a name="6.4.0"></a>
 # [6.4.0](https://github.com/sencrop/metapak-sencrop/compare/v6.3.2...v6.4.0) (2018-10-19)
 
