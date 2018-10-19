@@ -1,14 +1,16 @@
 'use strict';
 
 const path = require('path');
+const { getMetapakConfig } = require('../utils');
+
 const ORGANISATION_NAME = 'sencrop';
 const README_CONTENTS_START_TAG = `[//]: # (::contents:start)`;
 const README_CONTENTS_END_TAG = `[//]: # (::contents:end)`;
 const README_REGEXP = /^(?:[^]*)\[\/\/\]: # \(::contents:start\)\r?\n\r?\n([^]*)\r?\n\r?\n\[\/\/\]: # \(::contents:end\)(?:[^]*)$/gm;
 
 module.exports = (file, packageConf, { PROJECT_DIR, fs, log }) => {
-  const metapakConfigs =
-    (packageConf.metapak && packageConf.metapak.configs) || [];
+  const { configs } = getMetapakConfig(packageConf);
+
   // Simple README templating system
   if ('README.md' === file.name) {
     // Header
@@ -25,10 +27,10 @@ module.exports = (file, packageConf, { PROJECT_DIR, fs, log }) => {
       }
       file.data += '\n' + README_CONTENTS_END_TAG + '\n\n';
       file.data += '# Useful resources\n';
-      if (metapakConfigs.includes('jsdocs')) {
+      if (configs.includes('jsdocs')) {
         file.data += '- [API documentation](./API.md)\n';
       }
-      if (metapakConfigs.includes('jsarch')) {
+      if (configs.includes('jsarch')) {
         file.data += '- [Architecture Notes](./ARCHITECTURE.md)\n';
       }
       file.data += '- [Changelog](./CHANGELOG.md)\n\n';

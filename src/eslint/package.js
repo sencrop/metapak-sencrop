@@ -1,18 +1,17 @@
 'use strict';
 
-module.exports = packageConf => {
-  const metapakData =
-    packageConf.metapak && packageConf.metapak.data
-      ? packageConf.metapak.data
-      : {};
+const { getMetapakConfig } = require('../utils');
 
-  if (!metapakData.files) {
+module.exports = packageConf => {
+  const { data } = getMetapakConfig(packageConf);
+
+  if (!data.files) {
     throw new Error('E_NO_FILES');
   }
 
   packageConf.scripts = packageConf.scripts || {};
-  packageConf.scripts.lint = 'eslint ' + metapakData.files;
-  packageConf.scripts.prettier = 'prettier --write ' + metapakData.files;
+  packageConf.scripts.lint = 'eslint ' + data.files;
+  packageConf.scripts.prettier = 'prettier --write ' + data.files;
 
   // Add the MUST HAVE dev dependencies
   packageConf.devDependencies = packageConf.devDependencies || {};
