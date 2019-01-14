@@ -11,7 +11,7 @@ module.exports = packageConf => {
     'jsarch ' + data.files + ' > ARCHITECTURE.md';
   // Add doc deps
   packageConf.devDependencies = packageConf.devDependencies || {};
-  packageConf.devDependencies.jsarch = '^1.3.0';
+  packageConf.devDependencies.jsarch = '^2.0.1';
 
   return packageConf;
 };

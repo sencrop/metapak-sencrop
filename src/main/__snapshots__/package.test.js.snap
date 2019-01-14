@@ -8,8 +8,8 @@ Object {
     },
   },
   "devDependencies": Object {
-    "commitizen": "^2.10.1",
-    "conventional-changelog-cli": "^2.0.5",
+    "commitizen": "^3.0.5",
+    "conventional-changelog-cli": "^2.0.11",
     "cz-conventional-changelog": "^2.1.0",
   },
   "engines": Object {

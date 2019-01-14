@@ -1,23 +1,20 @@
 'use strict';
 
 const assert = require('assert');
-const sinon = require('sinon');
 const assetsTransformer = require('./assets');
 
 describe('Readme', () => {
   describe('Assets transformer for www configs', () => {
     it('should build the README.md file', done => {
       const fs = {
-        readFileAsync: sinon.stub(),
+        readFileAsync: jest.fn(),
       };
       const PROJECT_DIR = '/lol/';
       const log = {
-        error: sinon.stub,
+        error: jest.fn(),
       };
 
-      fs.readFileAsync
-        .onFirstCall()
-        .returns(Promise.resolve('## Usage\nJust require me\n'));
+      fs.readFileAsync.mockResolvedValueOnce('## Usage\nJust require me\n');
 
       assetsTransformer(
         {
@@ -45,16 +42,14 @@ describe('Readme', () => {
 
     it('should build the README.md file with links', done => {
       const fs = {
-        readFileAsync: sinon.stub(),
+        readFileAsync: jest.fn(),
       };
       const PROJECT_DIR = '/lol/';
       const log = {
-        error: sinon.stub,
+        error: jest.fn(),
       };
 
-      fs.readFileAsync
-        .onFirstCall()
-        .returns(Promise.resolve('## Usage\nJust require me\n'));
+      fs.readFileAsync.mockResolvedValueOnce('## Usage\nJust require me\n');
 
       assetsTransformer(
         {

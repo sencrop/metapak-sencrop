@@ -55,9 +55,9 @@ module.exports = packageConf => {
 
   // Add the MUST HAVE dev dependencies
   packageConf.devDependencies = packageConf.devDependencies || {};
-  packageConf.devDependencies.commitizen = '^2.10.1';
+  packageConf.devDependencies.commitizen = '^3.0.5';
   packageConf.devDependencies['cz-conventional-changelog'] = '^2.1.0';
-  packageConf.devDependencies['conventional-changelog-cli'] = '^2.0.5';
+  packageConf.devDependencies['conventional-changelog-cli'] = '^2.0.11';
 
   // This job is already done by NPM, but once,.
   // This allows to do it on old repositories
