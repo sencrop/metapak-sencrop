@@ -41,9 +41,13 @@ module.exports = packageConf => {
 
   // Add the changelog stuffs
   packageConf.scripts.changelog =
-    'conventional-changelog -p angular -i CHANGELOG.md -s';
-  packageConf.scripts.version = 'npm run changelog && git add CHANGELOG.md';
-  packageConf.scripts.lint = 'echo "WARNING: No linter configured"';
+    'conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md';
+  packageConf.scripts.version = ensureScript(
+    packageConf.scripts.version,
+    'npm run changelog',
+  );
+  packageConf.scripts.lint =
+    packageConf.scripts.lint || 'echo "WARNING: No linter configured"';
   packageConf.scripts.preversion = ensureScript(
     packageConf.scripts.preversion,
     LINT_SCRIPT,

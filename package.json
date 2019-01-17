@@ -16,7 +16,7 @@
     }
   },
   "scripts": {
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
     "cli": "env NODE_ENV=${NODE_ENV:-cli}",
     "cover": "NODE_ENV=${NODE_ENV:-test} jest --coverage",
     "cz": "env NODE_ENV=${NODE_ENV:-cli} git cz",
@@ -27,7 +27,7 @@
     "prettier": "prettier --write src/**/*.js",
     "preversion": "npm t && npm run lint && npm run metapak -- -s",
     "test": "npm run jest",
-    "version": "npm run changelog && git add CHANGELOG.md"
+    "version": "npm run changelog"
   },
   "repository": {
     "type": "git",
