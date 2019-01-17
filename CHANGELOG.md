@@ -1,3 +1,7 @@
+# [6.6.0](https://github.com/sencrop/metapak-sencrop/compare/v6.5.1...v6.6.0) (2019-01-17)
+
+
+
 ## [6.5.1](https://github.com/sencrop/metapak-sencrop/compare/v6.5.0...v6.5.1) (2019-01-14)
 
 
