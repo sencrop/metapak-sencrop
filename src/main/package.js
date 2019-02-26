@@ -46,6 +46,7 @@ module.exports = packageConf => {
     packageConf.scripts.version,
     'npm run changelog',
   );
+  packageConf.scripts.commitlint = 'commitlint';
   packageConf.scripts.lint =
     packageConf.scripts.lint || 'echo "WARNING: No linter configured"';
   packageConf.scripts.preversion = ensureScript(
@@ -60,6 +61,7 @@ module.exports = packageConf => {
   // Add the MUST HAVE dev dependencies
   packageConf.devDependencies = packageConf.devDependencies || {};
   packageConf.devDependencies.commitizen = '^3.0.5';
+  packageConf.devDependencies.commitlint = '^7.5.2';
   packageConf.devDependencies['cz-conventional-changelog'] = '^2.1.0';
   packageConf.devDependencies['conventional-changelog-cli'] = '^2.0.11';
 
