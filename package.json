@@ -12,18 +12,17 @@
       "oss"
     ],
     "data": {
-      "files": "src/**/*.js"
+      "files": "src/**/*.js",
+      "eslintConfigType": "backend"
     }
   },
   "scripts": {
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
     "cli": "env NODE_ENV=${NODE_ENV:-cli}",
     "cover": "NODE_ENV=${NODE_ENV:-test} jest --coverage",
-    "cz": "env NODE_ENV=${NODE_ENV:-cli} git cz",
     "jest": "NODE_ENV=${NODE_ENV:-test} jest",
     "lint": "eslint src/**/*.js",
     "metapak": "metapak",
-    "precz": "npm run lint && npm run metapak -- -s && npm t",
     "prettier": "prettier --write src/**/*.js",
     "preversion": "npm t && npm run lint && npm run metapak -- -s",
     "test": "npm run jest",
@@ -46,26 +45,26 @@
     "metapak": "^2.0.0"
   },
   "devDependencies": {
-    "commitizen": "^3.0.5",
+    "@commitlint/cli": "^7.5.2",
+    "@commitlint/config-conventional": "^7.5.0",
     "conventional-changelog-cli": "^2.0.11",
     "cz-conventional-changelog": "^2.1.0",
-    "eslint": "^5.12.0",
-    "eslint-plugin-import": "^2.14.0",
+    "eslint": "^5.14.1",
+    "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-prettier": "^3.0.1",
+    "husky": "^1.3.1",
     "jest": "^23.6.0",
+    "lint-staged": "^3.0.1",
     "metapak": "^3.1.6",
-    "prettier": "^1.15.3"
+    "prettier": "^1.16.4"
   },
   "engines": {
     "node": ">=8.10.0"
   },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
+  "config": {},
   "dependencies": {
-    "escape-string-regexp": "^1.0.5"
+    "escape-string-regexp": "^1.0.5",
+    "yerror": "^4.0.1"
   },
   "jest": {
     "coverageReporters": [
@@ -106,5 +105,14 @@
     "singleQuote": true,
     "trailingComma": "all",
     "proseWrap": "always"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": "eslint"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "npm t && lint-staged"
+    }
   }
 }

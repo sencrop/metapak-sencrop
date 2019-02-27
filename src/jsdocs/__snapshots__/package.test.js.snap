@@ -5,6 +5,11 @@ Object {
   "devDependencies": Object {
     "jsdoc-to-markdown": "^4.0.1",
   },
+  "husky": Object {
+    "hooks": Object {
+      "commit-msg": "npm run doc && git add API.md",
+    },
+  },
   "metapak": Object {
     "data": Object {
       "files": "yolo.js",
@@ -20,6 +25,11 @@ exports[`JSDocs Package transformer for jsdocs should work with an existing pack
 Object {
   "devDependencies": Object {
     "jsdoc-to-markdown": "^4.0.1",
+  },
+  "husky": Object {
+    "hooks": Object {
+      "commit-msg": "npm run doc && git add API.md",
+    },
   },
   "metapak": Object {
     "data": Object {

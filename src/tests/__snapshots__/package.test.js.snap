@@ -5,6 +5,11 @@ Object {
   "devDependencies": Object {
     "jest": "^23.6.0",
   },
+  "husky": Object {
+    "hooks": Object {
+      "pre-commit": "npm t",
+    },
+  },
   "jest": Object {
     "coverageReporters": Array [
       "lcov",
@@ -21,7 +26,6 @@ Object {
   "scripts": Object {
     "cover": "NODE_ENV=\${NODE_ENV:-test} jest --coverage",
     "jest": "NODE_ENV=\${NODE_ENV:-test} jest",
-    "precz": "npm t",
     "preversion": "npm t",
     "test": "npm run jest",
   },

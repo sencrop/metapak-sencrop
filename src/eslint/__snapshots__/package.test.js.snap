@@ -3,10 +3,11 @@
 exports[`Main Package transformer should work with an empty package.json 1`] = `
 Object {
   "devDependencies": Object {
-    "eslint": "^5.12.0",
-    "eslint-plugin-import": "^2.14.0",
+    "eslint": "^5.14.1",
+    "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-prettier": "^3.0.1",
-    "prettier": "^1.15.3",
+    "lint-staged": "^3.0.1",
+    "prettier": "^1.16.4",
   },
   "eslintConfig": Object {
     "env": Object {
@@ -28,8 +29,63 @@ Object {
       "prettier/prettier": "error",
     },
   },
+  "husky": Object {
+    "hooks": Object {
+      "pre-commit": "lint-staged",
+    },
+  },
+  "lint-staged": Object {
+    "*.{js,jsx}": "eslint",
+  },
   "metapak": Object {
     "data": Object {
+      "eslintConfigType": "backend",
+      "files": "lol.js",
+    },
+  },
+  "prettier": Object {
+    "printWidth": 80,
+    "proseWrap": "always",
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "all",
+  },
+  "scripts": Object {
+    "lint": "eslint lol.js",
+    "prettier": "prettier --write lol.js",
+  },
+}
+`;
+
+exports[`Main Package transformer should work with an empty package.json for react 1`] = `
+Object {
+  "devDependencies": Object {
+    "eslint": "^5.14.1",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "lint-staged": "^3.0.1",
+    "prettier": "^1.16.4",
+  },
+  "eslintConfig": Object {
+    "extends": "react-app",
+    "plugins": Array [
+      "prettier",
+    ],
+    "rules": Object {
+      "prettier/prettier": "error",
+    },
+  },
+  "husky": Object {
+    "hooks": Object {
+      "pre-commit": "lint-staged",
+    },
+  },
+  "lint-staged": Object {
+    "*.{js,jsx}": "eslint",
+  },
+  "metapak": Object {
+    "data": Object {
+      "eslintConfigType": "react",
       "files": "lol.js",
     },
   },

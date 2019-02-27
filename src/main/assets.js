@@ -55,7 +55,7 @@ module.exports = (file, packageConf) => {
   ) {
     file.data = TEXT_SNIPPET + file.data;
   } else if (file.name.endsWith('.js')) {
-    file.data = JS_SNIPPET + file.data;
+    file.data = JS_SNIPPET.trimLeft() + file.data;
   }
 
   return file;
