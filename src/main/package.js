@@ -73,5 +73,12 @@ module.exports = packageConf => {
     }
   }
 
+  // Delete commitizen
+  delete packageConf.devDependencies.commitizen;
+  delete packageConf.scripts.cz;
+  if (packageConf.config) {
+    delete packageConf.config.commitizen;
+  }
+
   return packageConf;
 };

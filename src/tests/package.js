@@ -43,5 +43,8 @@ module.exports = packageConf => {
   delete packageConf.devDependencies.sinon;
   delete packageConf.devDependencies.istanbul;
 
+  // Delete commitizen
+  delete packageConf.scripts.precz;
+
   return packageConf;
 };

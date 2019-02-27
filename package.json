@@ -20,11 +20,9 @@
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
     "cli": "env NODE_ENV=${NODE_ENV:-cli}",
     "cover": "NODE_ENV=${NODE_ENV:-test} jest --coverage",
-    "cz": "env NODE_ENV=${NODE_ENV:-cli} git cz",
     "jest": "NODE_ENV=${NODE_ENV:-test} jest",
     "lint": "eslint src/**/*.js",
     "metapak": "metapak",
-    "precz": "npm run lint && npm run metapak -- -s && npm t",
     "prettier": "prettier --write src/**/*.js",
     "preversion": "npm t && npm run lint && npm run metapak -- -s",
     "test": "npm run jest",
@@ -49,7 +47,6 @@
   "devDependencies": {
     "@commitlint/cli": "^7.5.2",
     "@commitlint/config-conventional": "^7.5.0",
-    "commitizen": "^3.0.5",
     "conventional-changelog-cli": "^2.0.11",
     "cz-conventional-changelog": "^2.1.0",
     "eslint": "^5.14.1",
@@ -64,13 +61,10 @@
   "engines": {
     "node": ">=8.10.0"
   },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
+  "config": {},
   "dependencies": {
-    "escape-string-regexp": "^1.0.5"
+    "escape-string-regexp": "^1.0.5",
+    "yerror": "^4.0.1"
   },
   "jest": {
     "coverageReporters": [

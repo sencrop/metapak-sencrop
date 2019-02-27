@@ -1,6 +1,7 @@
 'use strict';
 
 const { getMetapakConfig, ensureScript } = require('../utils');
+const YError = require('yerror');
 
 const ESLINT_CONFIG = {
   backend: {
@@ -40,7 +41,7 @@ module.exports = packageConf => {
     throw new Error('E_NO_ESLINT_TYPE');
   }
   if (!Object.keys(ESLINT_CONFIG).includes(data.eslintConfigType)) {
-    throw new Error('E_UNKNOWN_ESLINT_TYPE');
+    throw new YError('E_UNKNOWN_ESLINT_TYPE', data.eslintConfigType);
   }
 
   packageConf.scripts = packageConf.scripts || {};
