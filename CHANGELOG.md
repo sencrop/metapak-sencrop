@@ -1,3 +1,12 @@
+# [7.2.0](https://github.com/sencrop/metapak-sencrop/compare/v7.1.0...v7.2.0) (2019-02-27)
+
+
+### Features
+
+* **release:** automatize releases ([bb0eb1b](https://github.com/sencrop/metapak-sencrop/commit/bb0eb1b))
+
+
+
 <a name="7.1.0"></a>
 # [7.1.0](https://github.com/sencrop/metapak-sencrop/compare/v7.0.2...v7.1.0) (2019-02-27)
 
