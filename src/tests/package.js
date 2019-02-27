@@ -21,8 +21,11 @@ module.exports = packageConf => {
     packageConf.scripts.preversion,
     TEST_SCRIPT,
   );
-  packageConf.scripts.precz = ensureScript(
-    packageConf.scripts.precz,
+
+  packageConf.husky = packageConf.husky || {};
+  packageConf.husky.hooks = packageConf.husky.hooks || {};
+  packageConf.husky.hooks['pre-commit'] = ensureScript(
+    packageConf.husky.hooks['pre-commit'],
     TEST_SCRIPT,
   );
 

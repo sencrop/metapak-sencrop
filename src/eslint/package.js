@@ -1,6 +1,6 @@
 'use strict';
 
-const { getMetapakConfig } = require('../utils');
+const { getMetapakConfig, ensureScript } = require('../utils');
 
 const ESLINT_CONFIG = {
   backend: {
@@ -51,11 +51,24 @@ module.exports = packageConf => {
   packageConf.devDependencies = packageConf.devDependencies || {};
   packageConf.devDependencies.eslint = '^5.14.1';
   packageConf.devDependencies.prettier = '^1.16.4';
+  packageConf.devDependencies['lint-staged'] = '^3.0.1';
   packageConf.devDependencies['eslint-plugin-prettier'] = '^3.0.1';
   packageConf.devDependencies['eslint-plugin-import'] = '^2.16.0';
 
   // Add eslint config
   packageConf.eslintConfig = ESLINT_CONFIG[data.eslintConfigType];
+
+  // Add husky hooks for lint staged
+  packageConf.husky = packageConf.husky || {};
+  packageConf.husky.hooks = packageConf.husky.hooks || {};
+  packageConf.husky.hooks['pre-commit'] = ensureScript(
+    packageConf.husky.hooks['pre-commit'],
+    'lint-staged',
+  );
+
+  // Add lint-staged config
+  packageConf['lint-staged'] = packageConf['lint-staged'] || {};
+  packageConf['lint-staged']['*.{js,jsx}'] = 'eslint';
 
   // Add prettier config
   packageConf.prettier = {

@@ -23,22 +23,6 @@ module.exports = packageConf => {
   // without having global modules
   packageConf.scripts.cli = 'env NODE_ENV=${NODE_ENV:-cli}';
 
-  // Lets use commitizen
-  packageConf.scripts.precz = ensureScript(
-    packageConf.scripts.precz,
-    LINT_SCRIPT,
-  );
-  packageConf.scripts.precz = ensureScript(
-    packageConf.scripts.precz,
-    METAPAK_CHECK_SCRIPT,
-  );
-  packageConf.scripts.cz = 'env NODE_ENV=${NODE_ENV:-cli} git cz';
-  packageConf.config = {
-    commitizen: {
-      path: './node_modules/cz-conventional-changelog',
-    },
-  };
-
   // Add the changelog stuffs
   packageConf.scripts.changelog =
     'conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md';
@@ -59,9 +43,19 @@ module.exports = packageConf => {
 
   // Add the MUST HAVE dev dependencies
   packageConf.devDependencies = packageConf.devDependencies || {};
-  packageConf.devDependencies.commitizen = '^3.0.5';
+  packageConf.devDependencies['husky'] = '^1.3.1';
+  packageConf.devDependencies['@commitlint/cli'] = '^7.5.2';
+  packageConf.devDependencies['@commitlint/config-conventional'] = '^7.5.0';
   packageConf.devDependencies['cz-conventional-changelog'] = '^2.1.0';
   packageConf.devDependencies['conventional-changelog-cli'] = '^2.0.11';
+
+  // Add husky hooks for commitlint
+  packageConf.husky = packageConf.husky || {};
+  packageConf.husky.hooks = packageConf.husky.hooks || {};
+  packageConf.husky.hooks['commit-msg'] = ensureScript(
+    packageConf.husky.hooks['commit-msg'],
+    'commitlint -E HUSKY_GIT_PARAMS',
+  );
 
   // This job is already done by NPM, but once,.
   // This allows to do it on old repositories
