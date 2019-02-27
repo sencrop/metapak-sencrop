@@ -17,13 +17,13 @@ describe('Main', () => {
       ).toMatchSnapshot();
     });
 
-    test('should work with an empty package.json for react', () => {
+    test('should work with an empty package.json for create-react-app', () => {
       expect(
         packageTransformer({
           metapak: {
             data: {
               files: 'lol.js',
-              eslintConfigType: 'react',
+              eslintConfigType: 'create-react-app',
             },
           },
         }),

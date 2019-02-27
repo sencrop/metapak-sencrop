@@ -57,7 +57,7 @@ Object {
 }
 `;
 
-exports[`Main Package transformer should work with an empty package.json for react 1`] = `
+exports[`Main Package transformer should work with an empty package.json for create-react-app 1`] = `
 Object {
   "devDependencies": Object {
     "eslint": "^5.14.1",
@@ -85,7 +85,7 @@ Object {
   },
   "metapak": Object {
     "data": Object {
-      "eslintConfigType": "react",
+      "eslintConfigType": "create-react-app",
       "files": "lol.js",
     },
   },

@@ -21,7 +21,7 @@ const ESLINT_CONFIG = {
       'prettier/prettier': 'error',
     },
   },
-  react: {
+  'create-react-app': {
     extends: 'react-app',
     plugins: ['prettier'],
     rules: {
@@ -50,7 +50,8 @@ module.exports = packageConf => {
 
   // Add the MUST HAVE dev dependencies
   packageConf.devDependencies = packageConf.devDependencies || {};
-  packageConf.devDependencies.eslint = '^5.14.1';
+  packageConf.devDependencies.eslint =
+    data.eslintConfig === 'create-react-app' ? '5.6.0' : '^5.14.1';
   packageConf.devDependencies.prettier = '^1.16.4';
   packageConf.devDependencies['lint-staged'] = '^3.0.1';
   packageConf.devDependencies['eslint-plugin-prettier'] = '^3.0.1';
