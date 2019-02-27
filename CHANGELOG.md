@@ -1,3 +1,13 @@
+<a name="7.1.0"></a>
+# [7.1.0](https://github.com/sencrop/metapak-sencrop/compare/v7.0.2...v7.1.0) (2019-02-27)
+
+
+### Features
+
+* **git:** add gitignore for create react app ([dab23c8](https://github.com/sencrop/metapak-sencrop/commit/dab23c8))
+
+
+
 <a name="7.0.2"></a>
 ## [7.0.2](https://github.com/sencrop/metapak-sencrop/compare/v7.0.1...v7.0.2) (2019-02-27)
 
