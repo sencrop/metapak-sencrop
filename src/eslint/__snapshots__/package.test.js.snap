@@ -60,7 +60,7 @@ Object {
 exports[`Main Package transformer should work with an empty package.json for create-react-app 1`] = `
 Object {
   "devDependencies": Object {
-    "eslint": "^5.14.1",
+    "eslint": "5.6.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-prettier": "^3.0.1",
     "lint-staged": "^3.0.1",
