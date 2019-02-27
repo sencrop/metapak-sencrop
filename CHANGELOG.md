@@ -1,3 +1,8 @@
+<a name="7.0.0"></a>
+# [7.0.0](https://github.com/sencrop/metapak-sencrop/compare/v6.5.1...v7.0.0) (2019-02-27)
+
+
+
 # [6.6.0](https://github.com/sencrop/metapak-sencrop/compare/v6.5.1...v6.6.0) (2019-01-17)
 
 
