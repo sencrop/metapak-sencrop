@@ -1,3 +1,13 @@
+<a name="7.0.2"></a>
+## [7.0.2](https://github.com/sencrop/metapak-sencrop/compare/v7.0.1...v7.0.2) (2019-02-27)
+
+
+### Bug Fixes
+
+* **eslint:** correct previous fix :sorry: ([ef008bd](https://github.com/sencrop/metapak-sencrop/commit/ef008bd))
+
+
+
 <a name="7.0.1"></a>
 ## [7.0.1](https://github.com/sencrop/metapak-sencrop/compare/v7.0.0...v7.0.1) (2019-02-27)
 
