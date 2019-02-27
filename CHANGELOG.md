@@ -1,3 +1,13 @@
+<a name="7.0.1"></a>
+## [7.0.1](https://github.com/sencrop/metapak-sencrop/compare/v7.0.0...v7.0.1) (2019-02-27)
+
+
+### Bug Fixes
+
+* **eslint:** fix version eslint for create react app ([154803c](https://github.com/sencrop/metapak-sencrop/commit/154803c))
+
+
+
 <a name="7.0.0"></a>
 # [7.0.0](https://github.com/sencrop/metapak-sencrop/compare/v6.5.1...v7.0.0) (2019-02-27)
 
