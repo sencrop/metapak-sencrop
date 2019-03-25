@@ -1,3 +1,18 @@
+# [7.3.0](https://github.com/sencrop/metapak-sencrop/compare/v7.2.0...v7.3.0) (2019-03-25)
+
+
+### Bug Fixes
+
+* **metapak:** add missing edited package.json ([8cb0e79](https://github.com/sencrop/metapak-sencrop/commit/8cb0e79))
+
+
+### Features
+
+* **git:** check if unstaged files ([ad71dbc](https://github.com/sencrop/metapak-sencrop/commit/ad71dbc))
+* **tests:** make tests with lint staged ([8d32228](https://github.com/sencrop/metapak-sencrop/commit/8d32228))
+
+
+
 # [7.2.0](https://github.com/sencrop/metapak-sencrop/compare/v7.1.0...v7.2.0) (2019-02-27)
 
 
