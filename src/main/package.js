@@ -7,6 +7,9 @@ const GITHUB_REPOSITORY_REGEXP = /git\+https:\/\/github.com\/([a-zA-Z0-9-]+)\/([
 const LINT_SCRIPT = 'npm run lint';
 const METAPAK_CHECK_SCRIPT = 'npm run metapak -- -s';
 
+const PRE_COMMIT_CWD_WARNING =
+  'if ! git diff-files --quiet --ignore-submodules ; then echo "⚠️ - Unstaged files found:"; echo $(git diff-files --shortstat); fi;';
+
 module.exports = packageConf => {
   packageConf.license = 'SEE LICENSE IN LICENSE.md';
 
@@ -55,6 +58,19 @@ module.exports = packageConf => {
   packageConf.husky.hooks['commit-msg'] = ensureScript(
     packageConf.husky.hooks['commit-msg'],
     'commitlint -E HUSKY_GIT_PARAMS',
+  );
+
+  // Add husky hooks to test if there is staged file
+  packageConf.scripts.checkStaged = ensureScript(
+    packageConf.scripts.checkStaged,
+    PRE_COMMIT_CWD_WARNING,
+  );
+
+  packageConf.husky = packageConf.husky || {};
+  packageConf.husky.hooks = packageConf.husky.hooks || {};
+  packageConf.husky.hooks['pre-commit'] = ensureScript(
+    packageConf.husky.hooks['pre-commit'],
+    'npm run checkStaged',
   );
 
   // This job is already done by NPM, but once,.
