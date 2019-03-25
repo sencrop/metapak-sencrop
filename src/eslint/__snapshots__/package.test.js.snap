@@ -35,7 +35,10 @@ Object {
     },
   },
   "lint-staged": Object {
-    "*.{js,jsx}": "eslint",
+    "*.{js,jsx}": Array [
+      "eslint",
+      "jest --bail --findRelatedTests",
+    ],
   },
   "metapak": Object {
     "data": Object {
@@ -81,7 +84,10 @@ Object {
     },
   },
   "lint-staged": Object {
-    "*.{js,jsx}": "eslint",
+    "*.{js,jsx}": Array [
+      "eslint",
+      "jest --bail --findRelatedTests",
+    ],
   },
   "metapak": Object {
     "data": Object {

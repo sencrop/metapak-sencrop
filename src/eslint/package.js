@@ -71,7 +71,10 @@ module.exports = packageConf => {
 
   // Add lint-staged config
   packageConf['lint-staged'] = packageConf['lint-staged'] || {};
-  packageConf['lint-staged']['*.{js,jsx}'] = 'eslint';
+  packageConf['lint-staged']['*.{js,jsx}'] = [
+    'eslint',
+    'jest --bail --findRelatedTests',
+  ];
 
   // Add prettier config
   packageConf.prettier = {

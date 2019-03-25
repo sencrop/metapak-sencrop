@@ -22,13 +22,6 @@ module.exports = packageConf => {
     TEST_SCRIPT,
   );
 
-  packageConf.husky = packageConf.husky || {};
-  packageConf.husky.hooks = packageConf.husky.hooks || {};
-  packageConf.husky.hooks['pre-commit'] = ensureScript(
-    packageConf.husky.hooks['pre-commit'],
-    TEST_SCRIPT,
-  );
-
   // Add the jest config
   packageConf.jest = {
     coverageReporters: ['lcov'],
