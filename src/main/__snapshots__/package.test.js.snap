@@ -15,6 +15,7 @@ Object {
   "husky": Object {
     "hooks": Object {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "npm run checkStaged",
     },
   },
   "license": "SEE LICENSE IN LICENSE.md",
@@ -25,6 +26,7 @@ Object {
   },
   "scripts": Object {
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
+    "checkStaged": "if ! git diff-files --quiet --ignore-submodules ; then echo \\"⚠️ - Unstaged files found:\\"; echo $(git diff-files --shortstat); fi;",
     "cli": "env NODE_ENV=\${NODE_ENV:-cli}",
     "lint": "echo \\"WARNING: No linter configured\\"",
     "preversion": "npm run lint && npm run metapak -- -s",
