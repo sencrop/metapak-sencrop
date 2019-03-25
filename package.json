@@ -18,6 +18,7 @@
   },
   "scripts": {
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
+    "checkStaged": "if ! git diff-files --quiet --ignore-submodules ; then echo \"⚠️ - Unstaged files found:\"; echo $(git diff-files --shortstat); fi;",
     "cli": "env NODE_ENV=${NODE_ENV:-cli}",
     "cover": "NODE_ENV=${NODE_ENV:-test} jest --coverage",
     "jest": "NODE_ENV=${NODE_ENV:-test} jest",
@@ -114,12 +115,15 @@
     "proseWrap": "always"
   },
   "lint-staged": {
-    "*.{js,jsx}": "eslint"
+    "*.{js,jsx}": [
+      "eslint",
+      "jest --bail --findRelatedTests"
+    ]
   },
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "npm t && lint-staged"
+      "pre-commit": "npm run checkStaged && npm t && lint-staged"
     }
   },
   "release": {
