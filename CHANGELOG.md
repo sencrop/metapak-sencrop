@@ -1,3 +1,12 @@
+## [7.3.1](https://github.com/sencrop/metapak-sencrop/compare/v7.3.0...v7.3.1) (2019-04-10)
+
+
+### Bug Fixes
+
+* **deps:** bump lint-staged ([6365923](https://github.com/sencrop/metapak-sencrop/commit/6365923))
+
+
+
 # [7.3.0](https://github.com/sencrop/metapak-sencrop/compare/v7.2.0...v7.3.0) (2019-03-25)
 
 
