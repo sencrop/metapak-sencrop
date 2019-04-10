@@ -54,7 +54,7 @@ module.exports = packageConf => {
   packageConf.devDependencies.eslint =
     data.eslintConfigType === 'create-react-app' ? '5.6.0' : '^5.14.1';
   packageConf.devDependencies.prettier = '^1.16.4';
-  packageConf.devDependencies['lint-staged'] = '^3.0.1';
+  packageConf.devDependencies['lint-staged'] = '^8.1.5';
   packageConf.devDependencies['eslint-plugin-prettier'] = '^3.0.1';
   packageConf.devDependencies['eslint-plugin-import'] = '^2.16.0';
 
