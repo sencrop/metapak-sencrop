@@ -4,7 +4,7 @@ const packageTransformer = require('./package');
 
 describe('Main', () => {
   describe('Package transformer', () => {
-    test('should work with an empty package.json', () => {
+    test('should work with an empty package.json for backend', () => {
       expect(
         packageTransformer({
           metapak: {

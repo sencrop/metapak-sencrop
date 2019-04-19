@@ -5,27 +5,33 @@ const YError = require('yerror');
 
 const ESLINT_CONFIG = {
   backend: {
-    extends: 'eslint:recommended',
-    parserOptions: {
-      sourceType: 'module',
-      ecmaVersion: 9,
-    },
-    env: {
-      es6: true,
-      node: true,
-      jest: true,
-      mocha: true,
-    },
-    plugins: ['prettier', 'import'],
-    rules: {
-      'prettier/prettier': 'error',
+    version: '^5.14.1',
+    config: {
+      extends: 'eslint:recommended',
+      parserOptions: {
+        sourceType: 'module',
+        ecmaVersion: 9,
+      },
+      env: {
+        es6: true,
+        node: true,
+        jest: true,
+        mocha: true,
+      },
+      plugins: ['prettier', 'import'],
+      rules: {
+        'prettier/prettier': 'error',
+      },
     },
   },
   'create-react-app': {
-    extends: 'react-app',
-    plugins: ['prettier'],
-    rules: {
-      'prettier/prettier': 'error',
+    version: '5.12.0',
+    config: {
+      extends: 'react-app',
+      plugins: ['prettier'],
+      rules: {
+        'prettier/prettier': 'error',
+      },
     },
   },
 };
@@ -51,15 +57,17 @@ module.exports = packageConf => {
   // Add the MUST HAVE dev dependencies
   packageConf.devDependencies = packageConf.devDependencies || {};
 
-  packageConf.devDependencies.eslint =
-    data.eslintConfigType === 'create-react-app' ? '5.6.0' : '^5.14.1';
+  if (data.eslintConfigType !== 'create-react-app') {
+    packageConf.devDependencies['eslint-plugin-import'] = '^2.16.0';
+  }
   packageConf.devDependencies.prettier = '^1.16.4';
-  packageConf.devDependencies['lint-staged'] = '^8.1.5';
   packageConf.devDependencies['eslint-plugin-prettier'] = '^3.0.1';
-  packageConf.devDependencies['eslint-plugin-import'] = '^2.16.0';
+  packageConf.devDependencies['lint-staged'] = '^8.1.5';
 
   // Add eslint config
-  packageConf.eslintConfig = ESLINT_CONFIG[data.eslintConfigType];
+  packageConf.devDependencies.eslint =
+    ESLINT_CONFIG[data.eslintConfigType].version;
+  packageConf.eslintConfig = ESLINT_CONFIG[data.eslintConfigType].config;
 
   // Add husky hooks for lint staged
   packageConf.husky = packageConf.husky || {};
