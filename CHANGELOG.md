@@ -1,3 +1,12 @@
+## [7.3.2](https://github.com/sencrop/metapak-sencrop/compare/v7.3.1...v7.3.2) (2019-04-19)
+
+
+### Bug Fixes
+
+* **eslint:** correct eslint version for cra ([98d0330](https://github.com/sencrop/metapak-sencrop/commit/98d0330))
+
+
+
 ## [7.3.1](https://github.com/sencrop/metapak-sencrop/compare/v7.3.0...v7.3.1) (2019-04-10)
 
 
