@@ -1,3 +1,12 @@
+# [7.4.0](https://github.com/sencrop/metapak-sencrop/compare/v7.3.2...v7.4.0) (2019-05-16)
+
+
+### Features
+
+* **node:** bump lts to 10.15 ([b866ff8](https://github.com/sencrop/metapak-sencrop/commit/b866ff8))
+
+
+
 ## [7.3.2](https://github.com/sencrop/metapak-sencrop/compare/v7.3.1...v7.3.2) (2019-04-19)
 
 
