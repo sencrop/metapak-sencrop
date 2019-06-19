@@ -25,7 +25,7 @@ const ESLINT_CONFIG = {
     },
   },
   'create-react-app': {
-    version: '5.12.0',
+    version: '5.16.0',
     config: {
       extends: 'react-app',
       plugins: ['prettier'],
