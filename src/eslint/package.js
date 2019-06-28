@@ -5,7 +5,7 @@ const YError = require('yerror');
 
 const ESLINT_CONFIG = {
   backend: {
-    version: '^5.14.1',
+    version: '^6.0.1',
     config: {
       extends: 'eslint:recommended',
       parserOptions: {
