@@ -1,3 +1,13 @@
+<a name="7.4.2"></a>
+## [7.4.2](https://github.com/sencrop/metapak-sencrop/compare/v7.4.1...v7.4.2) (2019-06-28)
+
+
+### Bug Fixes
+
+* **eslint:** bump to new versions ([52128b9](https://github.com/sencrop/metapak-sencrop/commit/52128b9))
+
+
+
 <a name="7.4.1"></a>
 ## [7.4.1](https://github.com/sencrop/metapak-sencrop/compare/v7.4.0...v7.4.1) (2019-06-19)
 
