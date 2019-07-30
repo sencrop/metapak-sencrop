@@ -1,3 +1,13 @@
+<a name="7.4.3"></a>
+## [7.4.3](https://github.com/sencrop/metapak-sencrop/compare/v7.4.2...v7.4.3) (2019-07-30)
+
+
+### Bug Fixes
+
+* **hooks:** avoid precommit hook echoing ([0182271](https://github.com/sencrop/metapak-sencrop/commit/0182271))
+
+
+
 <a name="7.4.2"></a>
 ## [7.4.2](https://github.com/sencrop/metapak-sencrop/compare/v7.4.1...v7.4.2) (2019-06-28)
 
