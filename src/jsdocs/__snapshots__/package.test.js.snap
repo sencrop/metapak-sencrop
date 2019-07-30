@@ -3,7 +3,7 @@
 exports[`JSDocs Package transformer for jsdocs should work with an empty package.json 1`] = `
 Object {
   "devDependencies": Object {
-    "jsdoc-to-markdown": "^4.0.1",
+    "jsdoc-to-markdown": "^5.0.0",
   },
   "husky": Object {
     "hooks": Object {
@@ -24,7 +24,7 @@ Object {
 exports[`JSDocs Package transformer for jsdocs should work with an existing package.json 1`] = `
 Object {
   "devDependencies": Object {
-    "jsdoc-to-markdown": "^4.0.1",
+    "jsdoc-to-markdown": "^5.0.0",
   },
   "husky": Object {
     "hooks": Object {

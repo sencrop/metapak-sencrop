@@ -3,7 +3,7 @@
 exports[`Architecture Package transformer for jsdocs should work with an empty package.json 1`] = `
 Object {
   "devDependencies": Object {
-    "jsarch": "^2.0.1",
+    "jsarch": "^2.0.3",
   },
   "husky": Object {
     "hooks": Object {

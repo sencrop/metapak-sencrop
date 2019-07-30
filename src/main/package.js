@@ -46,11 +46,11 @@ module.exports = packageConf => {
 
   // Add the MUST HAVE dev dependencies
   packageConf.devDependencies = packageConf.devDependencies || {};
-  packageConf.devDependencies['husky'] = '^2.7.0';
-  packageConf.devDependencies['@commitlint/cli'] = '^8.0.0';
-  packageConf.devDependencies['@commitlint/config-conventional'] = '^8.0.0';
-  packageConf.devDependencies['cz-conventional-changelog'] = '^2.1.0';
-  packageConf.devDependencies['conventional-changelog-cli'] = '^2.0.11';
+  packageConf.devDependencies['husky'] = '^3.0.2';
+  packageConf.devDependencies['@commitlint/cli'] = '^8.1.0';
+  packageConf.devDependencies['@commitlint/config-conventional'] = '^8.1.0';
+  packageConf.devDependencies['cz-conventional-changelog'] = '^3.0.2';
+  packageConf.devDependencies['conventional-changelog-cli'] = '^2.0.23';
 
   // Add husky hooks for commitlint
   packageConf.husky = packageConf.husky || {};
@@ -70,7 +70,7 @@ module.exports = packageConf => {
   packageConf.husky.hooks = packageConf.husky.hooks || {};
   packageConf.husky.hooks['pre-commit'] = ensureScript(
     packageConf.husky.hooks['pre-commit'],
-    'npm run checkStaged',
+    'npm run --silent checkStaged',
   );
 
   // This job is already done by NPM, but once,.

@@ -13,7 +13,7 @@ module.exports = packageConf => {
 
   // Add doc deps
   packageConf.devDependencies = packageConf.devDependencies || {};
-  packageConf.devDependencies.jsarch = '^2.0.1';
+  packageConf.devDependencies.jsarch = '^2.0.3';
 
   // Add husky hooks for arch
   packageConf.husky = packageConf.husky || {};

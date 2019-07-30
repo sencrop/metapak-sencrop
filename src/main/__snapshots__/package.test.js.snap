@@ -3,11 +3,11 @@
 exports[`Main Package transformer should work with an empty package.json 1`] = `
 Object {
   "devDependencies": Object {
-    "@commitlint/cli": "^8.0.0",
-    "@commitlint/config-conventional": "^8.0.0",
-    "conventional-changelog-cli": "^2.0.11",
-    "cz-conventional-changelog": "^2.1.0",
-    "husky": "^2.7.0",
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
+    "conventional-changelog-cli": "^2.0.23",
+    "cz-conventional-changelog": "^3.0.2",
+    "husky": "^3.0.2",
   },
   "engines": Object {
     "node": ">=10.15.0",
@@ -15,7 +15,7 @@ Object {
   "husky": Object {
     "hooks": Object {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "npm run checkStaged",
+      "pre-commit": "npm run --silent checkStaged",
     },
   },
   "license": "SEE LICENSE IN LICENSE.md",
