@@ -7,7 +7,7 @@ const ESLINT_CONFIG = {
   backend: {
     version: '^6.1.0',
     config: {
-      extends: 'eslint:recommended',
+      extends: ['eslint:recommended', 'plugin:jest/recommended'],
       parserOptions: {
         sourceType: 'module',
         ecmaVersion: 9,
@@ -18,7 +18,7 @@ const ESLINT_CONFIG = {
         jest: true,
         mocha: true,
       },
-      plugins: ['prettier', 'import'],
+      plugins: ['prettier', 'import', 'jest'],
       rules: {
         'prettier/prettier': 'error',
       },
@@ -59,6 +59,7 @@ module.exports = packageConf => {
 
   if (data.eslintConfigType !== 'create-react-app') {
     packageConf.devDependencies['eslint-plugin-import'] = '^2.18.2';
+    packageConf.devDependencies['eslint-plugin-jest'] = '^22.16.0';
   }
   packageConf.devDependencies.prettier = '^1.18.2';
   packageConf.devDependencies['eslint-plugin-prettier'] = '^3.1.0';

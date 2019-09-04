@@ -5,6 +5,7 @@ Object {
   "devDependencies": Object {
     "eslint": "^6.1.0",
     "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.16.0",
     "eslint-plugin-prettier": "^3.1.0",
     "lint-staged": "^9.2.1",
     "prettier": "^1.18.2",
@@ -16,7 +17,10 @@ Object {
       "mocha": true,
       "node": true,
     },
-    "extends": "eslint:recommended",
+    "extends": Array [
+      "eslint:recommended",
+      "plugin:jest/recommended",
+    ],
     "parserOptions": Object {
       "ecmaVersion": 9,
       "sourceType": "module",
@@ -24,6 +28,7 @@ Object {
     "plugins": Array [
       "prettier",
       "import",
+      "jest",
     ],
     "rules": Object {
       "prettier/prettier": "error",

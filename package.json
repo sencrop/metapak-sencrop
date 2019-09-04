@@ -58,6 +58,7 @@
     "cz-conventional-changelog": "^3.0.2",
     "eslint": "^6.1.0",
     "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.16.0",
     "eslint-plugin-prettier": "^3.1.0",
     "husky": "^3.0.2",
     "jest": "^24.8.0",
@@ -88,7 +89,10 @@
     ]
   },
   "eslintConfig": {
-    "extends": "eslint:recommended",
+    "extends": [
+      "eslint:recommended",
+      "plugin:jest/recommended"
+    ],
     "parserOptions": {
       "sourceType": "module",
       "ecmaVersion": 9
@@ -101,7 +105,8 @@
     },
     "plugins": [
       "prettier",
-      "import"
+      "import",
+      "jest"
     ],
     "rules": {
       "prettier/prettier": "error"
