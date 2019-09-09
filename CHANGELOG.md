@@ -1,3 +1,13 @@
+<a name="7.5.0"></a>
+# [7.5.0](https://github.com/sencrop/metapak-sencrop/compare/v7.4.3...v7.5.0) (2019-09-09)
+
+
+### Features
+
+* **lint:** add jest eslint ([be720c1](https://github.com/sencrop/metapak-sencrop/commit/be720c1))
+
+
+
 <a name="7.4.3"></a>
 ## [7.4.3](https://github.com/sencrop/metapak-sencrop/compare/v7.4.2...v7.4.3) (2019-07-30)
 
