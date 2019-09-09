@@ -32,7 +32,7 @@ module.exports = packageConf => {
 
   // Add the testing dev dependencies
   packageConf.devDependencies = packageConf.devDependencies || {};
-  packageConf.devDependencies.jest = '^24.8.0';
+  packageConf.devDependencies.jest = '^24.9.0';
   delete packageConf.devDependencies.sinon;
   delete packageConf.devDependencies.istanbul;
 
