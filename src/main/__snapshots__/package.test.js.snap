@@ -3,11 +3,11 @@
 exports[`Main Package transformer should work with an empty package.json 1`] = `
 Object {
   "devDependencies": Object {
-    "@commitlint/cli": "^8.1.0",
-    "@commitlint/config-conventional": "^8.1.0",
-    "conventional-changelog-cli": "^2.0.23",
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "conventional-changelog-cli": "^2.0.27",
     "cz-conventional-changelog": "^3.0.2",
-    "husky": "^3.0.5",
+    "husky": "^3.0.9",
   },
   "engines": Object {
     "node": ">=10.15.0",
