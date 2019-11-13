@@ -1,6 +1,6 @@
 {
   "name": "metapak-sencrop",
-  "version": "7.5.0",
+  "version": "7.6.0",
   "description": "A `metapak` plugin for Sencrop projects",
   "main": "index.js",
   "metapak": {
