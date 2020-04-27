@@ -1,3 +1,13 @@
+<a name="7.7.0"></a>
+# [7.7.0](https://github.com/sencrop/metapak-sencrop/compare/v7.6.0...v7.7.0) (2020-04-27)
+
+
+### Features
+
+* **package:** bump husky + node version ([6b67874](https://github.com/sencrop/metapak-sencrop/commit/6b67874))
+
+
+
 <a name="7.6.0"></a>
 # [7.6.0](https://github.com/sencrop/metapak-sencrop/compare/v7.5.0...v7.6.0) (2019-11-13)
 
