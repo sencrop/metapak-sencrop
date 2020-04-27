@@ -7,10 +7,10 @@ Object {
     "@commitlint/config-conventional": "^8.2.0",
     "conventional-changelog-cli": "^2.0.27",
     "cz-conventional-changelog": "^3.0.2",
-    "husky": "^3.0.9",
+    "husky": "^4.2.0",
   },
   "engines": Object {
-    "node": ">=10.15.0",
+    "node": ">=12.13.0",
   },
   "husky": Object {
     "hooks": Object {
