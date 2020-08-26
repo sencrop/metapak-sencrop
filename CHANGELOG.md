@@ -1,3 +1,13 @@
+<a name="7.8.0"></a>
+# [7.8.0](https://github.com/sencrop/metapak-sencrop/compare/v7.7.0...v7.8.0) (2020-08-26)
+
+
+### Features
+
+* **build:** use github action ([9f00a33](https://github.com/sencrop/metapak-sencrop/commit/9f00a33))
+
+
+
 <a name="7.7.0"></a>
 # [7.7.0](https://github.com/sencrop/metapak-sencrop/compare/v7.6.0...v7.7.0) (2020-04-27)
 
