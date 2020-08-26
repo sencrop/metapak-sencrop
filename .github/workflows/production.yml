@@ -1,0 +1,32 @@
+name: Production
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  test-and-build:
+    if: "!contains(github.event.head_commit.message, 'ci skip')"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Git Checkout
+        uses: actions/checkout@v2
+
+      - name: Use Node.js v12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+
+      - name: Npm install
+        run: npm install
+
+      - name: Tests
+        run: npm run test
+
+      - name: Semantic Release
+        uses: cycjimmy/semantic-release-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
