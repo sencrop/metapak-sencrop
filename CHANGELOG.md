@@ -1,3 +1,13 @@
+<a name="7.9.0"></a>
+# [7.9.0](https://github.com/sencrop/metapak-sencrop/compare/v7.8.0...v7.9.0) (2020-10-15)
+
+
+### Features
+
+* **package:** bump husky ([653f3b0](https://github.com/sencrop/metapak-sencrop/commit/653f3b0))
+
+
+
 <a name="7.8.0"></a>
 # [7.8.0](https://github.com/sencrop/metapak-sencrop/compare/v7.7.0...v7.8.0) (2020-08-26)
 
