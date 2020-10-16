@@ -47,10 +47,10 @@ module.exports = packageConf => {
   // Add the MUST HAVE dev dependencies
   packageConf.devDependencies = packageConf.devDependencies || {};
   packageConf.devDependencies['husky'] = '^4.3.0';
-  packageConf.devDependencies['@commitlint/cli'] = '^8.2.0';
-  packageConf.devDependencies['@commitlint/config-conventional'] = '^8.2.0';
-  packageConf.devDependencies['cz-conventional-changelog'] = '^3.0.2';
-  packageConf.devDependencies['conventional-changelog-cli'] = '^2.0.27';
+  packageConf.devDependencies['@commitlint/cli'] = '^11.0.0';
+  packageConf.devDependencies['@commitlint/config-conventional'] = '^11.0.0';
+  packageConf.devDependencies['cz-conventional-changelog'] = '^3.3.0';
+  packageConf.devDependencies['conventional-changelog-cli'] = '^2.1.0';
 
   // Add husky hooks for commitlint
   packageConf.husky = packageConf.husky || {};
