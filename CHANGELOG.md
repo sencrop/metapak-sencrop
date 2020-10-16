@@ -1,3 +1,12 @@
+# [7.10.0](https://github.com/sencrop/metapak-sencrop/compare/v7.9.0...v7.10.0) (2020-10-16)
+
+
+### Features
+
+* **deps:** update dev deps ([c7c54e6](https://github.com/sencrop/metapak-sencrop/commit/c7c54e6995ab3145a2633f674f9a1ca536db732d))
+
+
+
 <a name="7.9.0"></a>
 # [7.9.0](https://github.com/sencrop/metapak-sencrop/compare/v7.8.0...v7.9.0) (2020-10-15)
 
