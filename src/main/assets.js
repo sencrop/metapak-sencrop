@@ -42,6 +42,15 @@ module.exports = (file, packageConf) => {
     return file;
   }
 
+  // Some file are returned as is to avoid inject comments
+  if (
+    ['.github/ISSUE_TEMPLATE.md', '.github/PULL_REQUEST_TEMPLATE.md'].includes(
+      file.name,
+    )
+  ) {
+    return file;
+  }
+
   // Add snippets
   if (file.name.endsWith('.md') || file.name.endsWith('.html')) {
     file.data = HTML_SNIPPET + file.data;
