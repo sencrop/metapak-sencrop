@@ -1,3 +1,12 @@
+# [7.11.0](https://github.com/sencrop/metapak-sencrop/compare/v7.10.0...v7.11.0) (2021-01-07)
+
+
+### Features
+
+* **templates:** simplify templates for github ([49df45a](https://github.com/sencrop/metapak-sencrop/commit/49df45a58136fca9144adfa388fb699d8d5f0107))
+
+
+
 # [7.10.0](https://github.com/sencrop/metapak-sencrop/compare/v7.9.0...v7.10.0) (2020-10-16)
 
 
