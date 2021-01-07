@@ -1,3 +1,12 @@
+## [7.11.1](https://github.com/sencrop/metapak-sencrop/compare/v7.11.0...v7.11.1) (2021-01-07)
+
+
+### Bug Fixes
+
+* **template:** remove comments ([65dbe2f](https://github.com/sencrop/metapak-sencrop/commit/65dbe2f108fce26220189eb329ef7f8ce39617d5))
+
+
+
 # [7.11.0](https://github.com/sencrop/metapak-sencrop/compare/v7.10.0...v7.11.0) (2021-01-07)
 
 
