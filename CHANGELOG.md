@@ -1,3 +1,17 @@
+# [7.12.0](https://github.com/sencrop/metapak-sencrop/compare/v7.11.1...v7.12.0) (2021-03-02)
+
+
+### Bug Fixes
+
+* **actions:** bump to node 14 ([7e53e50](https://github.com/sencrop/metapak-sencrop/commit/7e53e507ea0fc3a99f73af330b6ca64d86ecccd3))
+
+
+### Features
+
+* **node:** upgrade lts ([2954625](https://github.com/sencrop/metapak-sencrop/commit/2954625177a08110ba2a0656e9c46bad33fe6a44))
+
+
+
 ## [7.11.1](https://github.com/sencrop/metapak-sencrop/compare/v7.11.0...v7.11.1) (2021-01-07)
 
 
