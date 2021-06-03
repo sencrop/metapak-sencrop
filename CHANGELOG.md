@@ -1,3 +1,12 @@
+# [7.14.0](https://github.com/sencrop/metapak-sencrop/compare/v7.13.0...v7.14.0) (2021-06-03)
+
+
+### Features
+
+* **deps:** update deps ([a726b49](https://github.com/sencrop/metapak-sencrop/commit/a726b49ac303550ed4745b59ee7c1fb67569c619))
+
+
+
 # [7.13.0](https://github.com/sencrop/metapak-sencrop/compare/v7.12.0...v7.13.0) (2021-06-03)
 
 
