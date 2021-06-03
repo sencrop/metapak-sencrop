@@ -10,6 +10,8 @@ const METAPAK_CHECK_SCRIPT = 'npm run metapak -- -s';
 const PRE_COMMIT_CWD_WARNING =
   'if ! git diff-files --quiet --ignore-submodules ; then echo "⚠️ - Unstaged files found:"; echo $(git diff-files --shortstat); fi;';
 
+const HUSKY_SCRIPT = 'husky install';
+
 module.exports = packageConf => {
   packageConf.license = 'SEE LICENSE IN LICENSE.md';
 
@@ -46,19 +48,11 @@ module.exports = packageConf => {
 
   // Add the MUST HAVE dev dependencies
   packageConf.devDependencies = packageConf.devDependencies || {};
-  packageConf.devDependencies['husky'] = '^4.3.0';
+  packageConf.devDependencies['husky'] = '^6.0.0';
   packageConf.devDependencies['@commitlint/cli'] = '^11.0.0';
   packageConf.devDependencies['@commitlint/config-conventional'] = '^11.0.0';
   packageConf.devDependencies['cz-conventional-changelog'] = '^3.3.0';
   packageConf.devDependencies['conventional-changelog-cli'] = '^2.1.0';
-
-  // Add husky hooks for commitlint
-  packageConf.husky = packageConf.husky || {};
-  packageConf.husky.hooks = packageConf.husky.hooks || {};
-  packageConf.husky.hooks['commit-msg'] = ensureScript(
-    packageConf.husky.hooks['commit-msg'],
-    'commitlint -E HUSKY_GIT_PARAMS',
-  );
 
   // Add husky hooks to test if there is staged file
   packageConf.scripts.checkStaged = ensureScript(
@@ -66,10 +60,15 @@ module.exports = packageConf => {
     PRE_COMMIT_CWD_WARNING,
   );
 
-  packageConf.husky = packageConf.husky || {};
-  packageConf.husky.hooks = packageConf.husky.hooks || {};
-  packageConf.husky.hooks['pre-commit'] = ensureScript(
-    packageConf.husky.hooks['pre-commit'],
+  // Add husky prepare script
+  packageConf.scripts.prepare = ensureScript(
+    packageConf.scripts.prepare,
+    HUSKY_SCRIPT,
+  );
+
+  // Add pre-commit-lint
+  packageConf.scripts['pre-commit-lint'] = ensureScript(
+    packageConf.scripts['pre-commit-lint'],
     'npm run --silent checkStaged',
   );
 

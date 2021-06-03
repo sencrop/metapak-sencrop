@@ -5,11 +5,6 @@ Object {
   "devDependencies": Object {
     "jsarch": "^3.0.0",
   },
-  "husky": Object {
-    "hooks": Object {
-      "pre-commit": "npm run architecture && (git add ARCHITECTURE.md || exit 1)",
-    },
-  },
   "metapak": Object {
     "data": Object {
       "files": "yolo.js",
@@ -17,6 +12,7 @@ Object {
   },
   "scripts": Object {
     "architecture": "jsarch yolo.js > ARCHITECTURE.md",
+    "pre-commit-lint": "npm run architecture && (git add ARCHITECTURE.md || exit 1)",
   },
 }
 `;

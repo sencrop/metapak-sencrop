@@ -15,11 +15,9 @@ module.exports = packageConf => {
   packageConf.devDependencies = packageConf.devDependencies || {};
   packageConf.devDependencies['jsdoc-to-markdown'] = '^5.0.0';
 
-  // Add husky hooks for doc
-  packageConf.husky = packageConf.husky || {};
-  packageConf.husky.hooks = packageConf.husky.hooks || {};
-  packageConf.husky.hooks['commit-msg'] = ensureScript(
-    packageConf.husky.hooks['commit-msg'],
+  // Add pre-commit-lint
+  packageConf.scripts['pre-commit-lint'] = ensureScript(
+    packageConf.scripts['pre-commit-lint'],
     'npm run doc && git add API.md',
   );
 

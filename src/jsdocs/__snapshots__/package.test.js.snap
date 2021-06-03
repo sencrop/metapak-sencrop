@@ -5,11 +5,6 @@ Object {
   "devDependencies": Object {
     "jsdoc-to-markdown": "^5.0.0",
   },
-  "husky": Object {
-    "hooks": Object {
-      "commit-msg": "npm run doc && git add API.md",
-    },
-  },
   "metapak": Object {
     "data": Object {
       "files": "yolo.js",
@@ -17,6 +12,7 @@ Object {
   },
   "scripts": Object {
     "doc": " echo \\"# API\\" > API.md; jsdoc2md yolo.js >> API.md",
+    "pre-commit-lint": "npm run doc && git add API.md",
   },
 }
 `;
@@ -25,11 +21,6 @@ exports[`JSDocs Package transformer for jsdocs should work with an existing pack
 Object {
   "devDependencies": Object {
     "jsdoc-to-markdown": "^5.0.0",
-  },
-  "husky": Object {
-    "hooks": Object {
-      "commit-msg": "npm run doc && git add API.md",
-    },
   },
   "metapak": Object {
     "data": Object {
@@ -41,6 +32,7 @@ Object {
   },
   "scripts": Object {
     "doc": " echo \\"# API\\" > API.md; jsdoc2md yolo.js >> API.md",
+    "pre-commit-lint": "npm run doc && git add API.md",
   },
 }
 `;

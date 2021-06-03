@@ -34,11 +34,6 @@ Object {
       "prettier/prettier": "error",
     },
   },
-  "husky": Object {
-    "hooks": Object {
-      "pre-commit": "lint-staged",
-    },
-  },
   "lint-staged": Object {
     "*.{js,jsx}": Array [
       "eslint",
@@ -60,6 +55,7 @@ Object {
   },
   "scripts": Object {
     "lint": "eslint lol.js",
+    "pre-commit-lint": "lint-staged",
     "prettier": "prettier --write lol.js",
   },
 }
@@ -80,11 +76,6 @@ Object {
     ],
     "rules": Object {
       "prettier/prettier": "error",
-    },
-  },
-  "husky": Object {
-    "hooks": Object {
-      "pre-commit": "lint-staged",
     },
   },
   "lint-staged": Object {
@@ -108,6 +99,7 @@ Object {
   },
   "scripts": Object {
     "lint": "eslint lol.js",
+    "pre-commit-lint": "lint-staged",
     "prettier": "prettier --write lol.js",
   },
 }

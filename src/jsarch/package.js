@@ -15,11 +15,9 @@ module.exports = packageConf => {
   packageConf.devDependencies = packageConf.devDependencies || {};
   packageConf.devDependencies.jsarch = '^3.0.0';
 
-  // Add husky hooks for arch
-  packageConf.husky = packageConf.husky || {};
-  packageConf.husky.hooks = packageConf.husky.hooks || {};
-  packageConf.husky.hooks['pre-commit'] = ensureScript(
-    packageConf.husky.hooks['pre-commit'],
+  // Add pre-commit-lint
+  packageConf.scripts['pre-commit-lint'] = ensureScript(
+    packageConf.scripts['pre-commit-lint'],
     'npm run architecture && (git add ARCHITECTURE.md || exit 1)',
   );
 

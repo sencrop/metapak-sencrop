@@ -71,10 +71,8 @@ module.exports = packageConf => {
   packageConf.eslintConfig = ESLINT_CONFIG[data.eslintConfigType].config;
 
   // Add husky hooks for lint staged
-  packageConf.husky = packageConf.husky || {};
-  packageConf.husky.hooks = packageConf.husky.hooks || {};
-  packageConf.husky.hooks['pre-commit'] = ensureScript(
-    packageConf.husky.hooks['pre-commit'],
+  packageConf.scripts['pre-commit-lint'] = ensureScript(
+    packageConf.scripts['pre-commit-lint'],
     'lint-staged',
   );
 
