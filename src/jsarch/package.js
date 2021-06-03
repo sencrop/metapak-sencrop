@@ -3,7 +3,7 @@
 const { getMetapakConfig } = require('../utils');
 const { ensureScript } = require('../utils');
 
-module.exports = packageConf => {
+module.exports = (packageConf) => {
   const { data } = getMetapakConfig(packageConf);
 
   // Adding documentation generation script

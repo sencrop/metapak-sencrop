@@ -6,7 +6,7 @@ const { getMetapakConfig } = require('../utils');
 const TEST_SCRIPT = 'npm t';
 const JEST_SCRIPT = 'npm run jest';
 
-module.exports = packageConf => {
+module.exports = (packageConf) => {
   const { data } = getMetapakConfig(packageConf);
 
   // Let's add test scripts
@@ -32,7 +32,7 @@ module.exports = packageConf => {
 
   // Add the testing dev dependencies
   packageConf.devDependencies = packageConf.devDependencies || {};
-  packageConf.devDependencies.jest = '^24.9.0';
+  packageConf.devDependencies.jest = '^27.0.4';
   delete packageConf.devDependencies.sinon;
   delete packageConf.devDependencies.istanbul;
 

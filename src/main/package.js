@@ -3,7 +3,8 @@
 const config = require('../config.js');
 const { ensureScript } = require('../utils');
 
-const GITHUB_REPOSITORY_REGEXP = /git\+https:\/\/github.com\/([a-zA-Z0-9-]+)\/([a-zA-Z0-9-]+)\.git/;
+const GITHUB_REPOSITORY_REGEXP =
+  /git\+https:\/\/github.com\/([a-zA-Z0-9-]+)\/([a-zA-Z0-9-]+)\.git/;
 const LINT_SCRIPT = 'npm run lint';
 const METAPAK_CHECK_SCRIPT = 'npm run metapak -- -s';
 
@@ -12,7 +13,7 @@ const PRE_COMMIT_CWD_WARNING =
 
 const HUSKY_SCRIPT = 'husky install';
 
-module.exports = packageConf => {
+module.exports = (packageConf) => {
   packageConf.license = 'SEE LICENSE IN LICENSE.md';
 
   // Let's always start with the 0.0.0 version
@@ -49,10 +50,10 @@ module.exports = packageConf => {
   // Add the MUST HAVE dev dependencies
   packageConf.devDependencies = packageConf.devDependencies || {};
   packageConf.devDependencies['husky'] = '^6.0.0';
-  packageConf.devDependencies['@commitlint/cli'] = '^11.0.0';
-  packageConf.devDependencies['@commitlint/config-conventional'] = '^11.0.0';
+  packageConf.devDependencies['@commitlint/cli'] = '^12.1.4';
+  packageConf.devDependencies['@commitlint/config-conventional'] = '^12.1.4';
   packageConf.devDependencies['cz-conventional-changelog'] = '^3.3.0';
-  packageConf.devDependencies['conventional-changelog-cli'] = '^2.1.0';
+  packageConf.devDependencies['conventional-changelog-cli'] = '^2.1.1';
 
   // Add husky hooks to test if there is staged file
   packageConf.scripts.checkStaged = ensureScript(

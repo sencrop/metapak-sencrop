@@ -6,7 +6,8 @@ const { getMetapakConfig } = require('../utils');
 const ORGANISATION_NAME = 'sencrop';
 const README_CONTENTS_START_TAG = `[//]: # (::contents:start)`;
 const README_CONTENTS_END_TAG = `[//]: # (::contents:end)`;
-const README_REGEXP = /^(?:[^]*)\[\/\/\]: # \(::contents:start\)\r?\n\r?\n([^]*)\r?\n\r?\n\[\/\/\]: # \(::contents:end\)(?:[^]*)$/gm;
+const README_REGEXP =
+  /^(?:[^]*)\[\/\/\]: # \(::contents:start\)\r?\n\r?\n([^]*)\r?\n\r?\n\[\/\/\]: # \(::contents:end\)(?:[^]*)$/gm;
 
 module.exports = (file, packageConf, { PROJECT_DIR, fs, log }) => {
   const { configs } = getMetapakConfig(packageConf);
@@ -20,7 +21,7 @@ module.exports = (file, packageConf, { PROJECT_DIR, fs, log }) => {
     }
     file.data += '\n';
 
-    return _getReadmeContents({ PROJECT_DIR, fs, log }).then(readme => {
+    return _getReadmeContents({ PROJECT_DIR, fs, log }).then((readme) => {
       file.data += '\n\n' + README_CONTENTS_START_TAG + '\n\n';
       if (readme) {
         file.data += readme + '\n';
@@ -55,12 +56,12 @@ function _getReadmeContents({ PROJECT_DIR, fs, log }) {
 
   return fs
     .readFileAsync(filePath, 'utf8')
-    .catch(err => {
+    .catch((err) => {
       log('error', 'Cannot read the README.md file contents:', filePath);
       log('stack', err.stack);
       throw err;
     })
-    .then(contents => {
+    .then((contents) => {
       return contents.replace(README_REGEXP, '$1');
     });
 }

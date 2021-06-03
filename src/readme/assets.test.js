@@ -5,7 +5,7 @@ const assetsTransformer = require('./assets');
 
 describe('Readme', () => {
   describe('Assets transformer for www configs', () => {
-    it('should build the README.md file', done => {
+    it('should build the README.md file', async () => {
       const fs = {
         readFileAsync: jest.fn(),
       };
@@ -16,7 +16,7 @@ describe('Readme', () => {
 
       fs.readFileAsync.mockResolvedValueOnce('## Usage\nJust require me\n');
 
-      assetsTransformer(
+      const file = await assetsTransformer(
         {
           name: 'README.md',
           data: '<!-- something -->\n',
@@ -32,15 +32,12 @@ describe('Readme', () => {
           fs,
           log,
         },
-      )
-        .then(file => {
-          expect(file).toMatchSnapshot();
-        })
-        .then(done)
-        .catch(done);
+      );
+
+      expect(file).toMatchSnapshot();
     });
 
-    it('should build the README.md file with links', done => {
+    it('should build the README.md file with links', async () => {
       const fs = {
         readFileAsync: jest.fn(),
       };
@@ -51,7 +48,7 @@ describe('Readme', () => {
 
       fs.readFileAsync.mockResolvedValueOnce('## Usage\nJust require me\n');
 
-      assetsTransformer(
+      const file = await assetsTransformer(
         {
           name: 'README.md',
           data: '<!-- something -->\n',
@@ -68,16 +65,13 @@ describe('Readme', () => {
           fs,
           log,
         },
-      )
-        .then(file => {
-          expect(file).toMatchSnapshot();
-        })
-        .then(done)
-        .catch(done);
+      );
+      expect(file).toMatchSnapshot();
     });
 
+    // eslint-disable-next-line jest/expect-expect
     it('should let pass other files', () => {
-      assert.deepEqual(
+      assert.deepStrictEqual(
         assetsTransformer(
           {
             name: 'YOLO',

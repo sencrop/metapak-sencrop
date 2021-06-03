@@ -5,7 +5,7 @@ const YError = require('yerror');
 
 const ESLINT_CONFIG = {
   backend: {
-    version: '^6.6.0',
+    version: '^7.27.0',
     config: {
       extends: ['eslint:recommended', 'plugin:jest/recommended'],
       parserOptions: {
@@ -36,7 +36,7 @@ const ESLINT_CONFIG = {
   },
 };
 
-module.exports = packageConf => {
+module.exports = (packageConf) => {
   const { data } = getMetapakConfig(packageConf);
 
   if (!data.files) {
@@ -58,12 +58,12 @@ module.exports = packageConf => {
   packageConf.devDependencies = packageConf.devDependencies || {};
 
   if (data.eslintConfigType !== 'create-react-app') {
-    packageConf.devDependencies['eslint-plugin-import'] = '^2.18.2';
-    packageConf.devDependencies['eslint-plugin-jest'] = '^22.17.0';
+    packageConf.devDependencies['eslint-plugin-import'] = '^2.23.4';
+    packageConf.devDependencies['eslint-plugin-jest'] = '^24.3.6';
   }
-  packageConf.devDependencies.prettier = '^1.19.1';
-  packageConf.devDependencies['eslint-plugin-prettier'] = '^3.1.1';
-  packageConf.devDependencies['lint-staged'] = '^9.4.2';
+  packageConf.devDependencies.prettier = '^2.3.0';
+  packageConf.devDependencies['eslint-plugin-prettier'] = '^3.4.0';
+  packageConf.devDependencies['lint-staged'] = '^11.0.0';
 
   // Add eslint config
   packageConf.devDependencies.eslint =

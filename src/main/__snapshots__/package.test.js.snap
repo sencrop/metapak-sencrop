@@ -3,9 +3,9 @@
 exports[`Main Package transformer should work with an empty package.json 1`] = `
 Object {
   "devDependencies": Object {
-    "@commitlint/cli": "^11.0.0",
-    "@commitlint/config-conventional": "^11.0.0",
-    "conventional-changelog-cli": "^2.1.0",
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "conventional-changelog-cli": "^2.1.1",
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^6.0.0",
   },
