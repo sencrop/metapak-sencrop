@@ -1,3 +1,12 @@
+# [7.13.0](https://github.com/sencrop/metapak-sencrop/compare/v7.12.0...v7.13.0) (2021-06-03)
+
+
+### Features
+
+* **main:** update husky to v6 ([2b6ee1d](https://github.com/sencrop/metapak-sencrop/commit/2b6ee1d04cfc0838c48fbdd34ed5745d726c7782))
+
+
+
 # [7.12.0](https://github.com/sencrop/metapak-sencrop/compare/v7.11.1...v7.12.0) (2021-03-02)
 
 
