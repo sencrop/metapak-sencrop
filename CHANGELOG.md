@@ -1,3 +1,12 @@
+## [7.14.1](https://github.com/sencrop/metapak-sencrop/compare/v7.14.0...v7.14.1) (2021-06-04)
+
+
+### Bug Fixes
+
+* **deps:** bump jsarch ([de568f0](https://github.com/sencrop/metapak-sencrop/commit/de568f0be55ec13ea3e01c2e855b74e4d1b10c92))
+
+
+
 # [7.14.0](https://github.com/sencrop/metapak-sencrop/compare/v7.13.0...v7.14.0) (2021-06-03)
 
 
