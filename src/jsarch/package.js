@@ -13,7 +13,7 @@ module.exports = (packageConf) => {
 
   // Add doc deps
   packageConf.devDependencies = packageConf.devDependencies || {};
-  packageConf.devDependencies.jsarch = '^3.0.0';
+  packageConf.devDependencies.jsarch = '^4.0.1';
 
   // Add pre-commit-lint
   packageConf.scripts['pre-commit-lint'] = ensureScript(
