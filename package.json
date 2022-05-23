@@ -70,7 +70,7 @@
     "semantic-release": "^17.4.3"
   },
   "engines": {
-    "node": ">=14.16.0"
+    "node": ">=16.15.0"
   },
   "config": {},
   "dependencies": {
