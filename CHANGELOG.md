@@ -1,3 +1,12 @@
+# [7.15.0](https://github.com/sencrop/metapak-sencrop/compare/v7.14.1...v7.15.0) (2022-05-23)
+
+
+### Features
+
+* **node:** bump to node 16 ([377000f](https://github.com/sencrop/metapak-sencrop/commit/377000f18fe2a3dbee3115865ee7fb6cdf6f3203))
+
+
+
 ## [7.14.1](https://github.com/sencrop/metapak-sencrop/compare/v7.14.0...v7.14.1) (2021-06-04)
 
 
